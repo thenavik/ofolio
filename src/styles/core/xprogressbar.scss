@@ -1,0 +1,90 @@
+@import '../../styles/xvariables.scss';
+
+.progress-bar {
+    border-radius: 15px;
+
+    .bar {
+        border-radius: 15px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        font-weight: 100;
+        color: #fff;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        label {
+            padding: 0px 5px;
+        }
+    }
+}
+
+//PROGRESS BAR TYPES
+//PRIMARY
+.primary-main-bcg {
+    background-color: #f1f1ff;
+}
+
+
+
+// PROGRESS BAR PROGRESS WIDTH
+.w10 {
+    width: 10%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.w40 {
+    width: 40%;
+}
+
+.w50 {
+    width: 50%;
+}
+
+.w60 {
+    width: 60%;
+}
+
+.w70 {
+    width: 70%;
+}
+
+.w80 {
+    width: 80%;
+}
+
+.w90 {
+    width: 90%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+//PROGRESS BAR DIFFERENT SIZES
+
+.default-progres-bar {
+    height: 7px;
+    .bar {
+        height: 7px;
+    }
+}
+
+.warning {
+    background-color: #ffc107 !important;
+}
+
+.danger {
+    background-color: #dc3545 !important;
+}
+
+.primary {
+    background-color: #007bff !important;
+}

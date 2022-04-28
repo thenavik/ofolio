@@ -13,8 +13,8 @@ export default function Router() {
       <XHeader />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/about" element={<XAbout />} />
+        {/* <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<XAbout />} /> */}
       </Routes>
     </>
   );

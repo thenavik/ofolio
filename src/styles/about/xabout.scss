@@ -1,0 +1,108 @@
+.about {
+    padding-top: 110px;
+    position: relative;
+
+    .about-title {
+        font-size: 30px;
+        margin-left: 14px;
+        margin-bottom: 60px;
+
+        h2 {
+            color: #454360;
+            font-weight: 700;
+            line-height: 1.2;
+            text-align: left;
+        }
+    }
+
+    .about-row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+
+    .about-avatar {
+        margin-right: 100px;
+    }
+
+    .rounded {
+        padding: 30px;
+        box-shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+        background: #fff;
+        border-radius: 20px !important;
+
+        .left {
+            p {
+                margin-bottom: 1rem;
+                font-size: 16px;
+                line-height: 1.7;
+                color: #5e5c7f;
+            }
+        }
+
+        .right {
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+
+            .skiil-item {
+                .skill-header {
+                    font-size: 16px;
+                    font-weight: 500;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    h4 {
+                        color: #454360;
+                        margin: 20px 0;
+                        line-height: 1.2;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        line-height: 1.7;
+                        color: #5e5c7f;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+.about-body {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.spacer-70 {
+    height: 70px;
+}
+
+.facts-section {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+
+    svg {
+        font-size: 46px;
+        color: #dedeea;
+        float: left;
+    }
+
+    .fact-detail {
+        margin-left: 60px;
+
+        h3 {
+            font-size: 30px;
+            color: #454360;
+            font-weight: 700;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}

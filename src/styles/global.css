@@ -10,6 +10,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 1.7;
+  font-weight: 400;
 }
 a {
   text-decoration: none;
@@ -36,6 +37,10 @@ li {
 .col_12 {
   flex: 0 0 100%;
   max-width: 100%;
+}
+.col_9 {
+  flex: 0 0 75%;
+  max-width: 75%;
 }
 .col_8 {
   flex: 0 0 66.6666%;
