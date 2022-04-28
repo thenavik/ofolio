@@ -1,11 +1,11 @@
 import React from "react";
-import Router from "./router/Router";
+import Main from "./components/main/Main";
 import "./styles/global.css";
 
 function App() {
   return (
     <>
-      <Router />
+      <Main />
     </>
   );
 }

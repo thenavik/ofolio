@@ -1,0 +1,50 @@
+.home {
+    margin: auto;
+    max-width: 540px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+    img {
+        max-width: 100%;
+        height: auto;
+        vertical-align: middle;
+    }
+    .user-name {
+        color: #353353;
+        font-size: 35px;
+        margin-bottom: 0.5rem;
+        font-weight: 700;
+        margin: 20px 0px;
+        text-align: center;
+    }
+    span {
+        color: #454360;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        .icons {
+            font-size: 20px;
+            margin-right: 1.5rem;
+            color: #353353;
+        }
+    }
+    .button {
+        margin-top: 1.5rem;
+        background: #ff4c60;
+        color: #fff;
+        outline: none;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 32px;
+        line-height: 1;
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
