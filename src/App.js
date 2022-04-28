@@ -1,11 +1,11 @@
 import React from "react";
-import Main from "./components/main/Main";
+import Reouter from "./router/Router";
 import "./styles/global.css";
 
 function App() {
   return (
     <>
-      <Main />
+      <Reouter />
     </>
   );
 }
