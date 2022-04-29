@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/header/xheader.scss";
+import OfolioLogo from "../Header/ofolio.png";
 
 export default function XHeader() {
   return (
@@ -7,7 +8,9 @@ export default function XHeader() {
       <header className="header">
         <div className="container_ofolio">
           <nav className="navbar">
-            <a href=""> Logo.</a>
+            <a href="">
+              <img src={OfolioLogo}></img>
+            </a>
             <div className="menu">
               <ul className="menu-list">
                 <li className="menu-item">

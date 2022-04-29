@@ -6,13 +6,14 @@ import "../../styles/about/xabout.scss";
 import { AiOutlineFire, AiOutlineFieldTime } from "react-icons/ai";
 import { FiCoffee } from "react-icons/fi";
 import { BiCodeAlt } from "react-icons/bi";
+import XMainHeadline from "../../core/XMainHeadline";
 
 export default function XAbout() {
   return (
     <>
       <div className="about">
         <div className="container_ofolio">
-          <h1 className="about-title">About Me</h1>
+          <XMainHeadline title={"About Me"} />
           <div className="row about-row">
             <div className="col_3 about-avatar">
               <img src={AboutAvatar}></img>
