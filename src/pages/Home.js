@@ -6,6 +6,7 @@ import ".././styles/home/xhome.scss";
 import AvatarIcon from ".././styles/home/avatar-1.svg";
 import XAbout from "../components/About/XAbout";
 import XSkills from "../components/Skills/XSkills";
+import XExperience from "../components/Experience/XExperience";
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
       </div>
       <XAbout />
       <XSkills />
+      <XExperience />
     </div>
   );
 }
