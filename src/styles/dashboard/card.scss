@@ -1,0 +1,46 @@
+.card {
+  width: 100%;
+  height: auto;
+
+  &__wrapper {
+    padding: 25px;
+    border: 1px dashed #5e5c7f;
+    border-radius: 6px;
+    box-shadow: 0px 0px 1px rgb(0 0 0 / 8%), 0px 8px 20px rgb(0 0 0 / 6%);
+
+    .card__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h4 {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: normal;
+        color: #6c7377;
+
+        .user__age {
+          margin-left: 12px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 18px;
+          letter-spacing: normal;
+          color: #0b5a88;
+        }
+      }
+
+      .card__controll {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        letter-spacing: normal;
+        color: #205aed;
+        cursor: pointer;
+        svg {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

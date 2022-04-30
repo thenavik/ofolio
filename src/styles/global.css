@@ -23,14 +23,16 @@ ul {
 li {
   list-style: none;
 }
+.mt-2 {
+  margin-top: 2rem;
+}
 
 .row {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: start;
-  align-items: center;
-  gap: 20px 10px;
+  gap: 10px;
 }
 
 .col_12 {

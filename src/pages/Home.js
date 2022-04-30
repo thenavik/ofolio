@@ -2,6 +2,7 @@ import React from "react";
 import { FaWhatsapp, FaTelegram, FiGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineGithub } from "react-icons/ai";
 import { BsMessenger } from "react-icons/bs";
+import XAbout from "../components/About/XAbout";
 import ".././styles/home/xhome.scss";
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
           <button className="button">Contact Me</button>
         </div>
       </div>
+      <XAbout />
     </div>
   );
 }
