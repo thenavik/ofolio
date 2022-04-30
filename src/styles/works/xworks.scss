@@ -1,0 +1,14 @@
+.work-section {
+    padding-top: 100px;
+    position: relative;
+
+    .works-row {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .load-more {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -7,6 +7,9 @@ import AvatarIcon from ".././styles/home/avatar-1.svg";
 import XAbout from "../components/About/XAbout";
 import XSkills from "../components/Skills/XSkills";
 import XExperience from "../components/Experience/XExperience";
+import XWork from "../components/Works/XWorks";
+import XBlog from "../components/Blog/XBlog";
+import XFooter from "../components/footer/XFooter";
 
 export default function Home() {
   return (
@@ -49,6 +52,9 @@ export default function Home() {
       <XAbout />
       <XSkills />
       <XExperience />
+      <XWork />
+      <XBlog />
+      <XFooter />
     </div>
   );
 }

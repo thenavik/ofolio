@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/core/block.scss";
-import { MdOutlineSchool } from "react-icons/md";
+import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 
 export default function XExperienceBlock() {
   return (
@@ -52,7 +52,7 @@ export default function XExperienceBlock() {
         <div className="block-inner">
           <div className="block-body">
             <div className="block-icons">
-              <MdOutlineSchool />
+              <MdWorkOutline />
             </div>
             <div className="block-content">
               <span className="time">2019 - Present</span>
@@ -65,7 +65,7 @@ export default function XExperienceBlock() {
           </div>
           <div className="block-body">
             <div className="block-icons">
-              <MdOutlineSchool />
+              <MdWorkOutline />
             </div>
             <div className="block-content">
               <span className="time">2017 - 2013</span>
@@ -78,7 +78,7 @@ export default function XExperienceBlock() {
           </div>
           <div className="block-body">
             <div className="block-icons">
-              <MdOutlineSchool />
+              <MdWorkOutline />
             </div>
             <div className="block-content">
               <span className="time">2013 - 2009</span>

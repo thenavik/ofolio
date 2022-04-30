@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-color: rgb(243, 243, 243);
+    span {
+        font-size: 14px;
+        a {
+            cursor: pointer;
+            font-style: italic;
+        }
+    }
+}
