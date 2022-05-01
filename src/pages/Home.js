@@ -2,15 +2,21 @@ import React from "react";
 import { FaWhatsapp, FaTelegram, FiGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineGithub } from "react-icons/ai";
 import { BsMessenger } from "react-icons/bs";
-import XAbout from "../components/About/XAbout";
 import ".././styles/home/xhome.scss";
+import AvatarIcon from ".././styles/home/avatar-1.svg";
+import XAbout from "../components/About/XAbout";
+import XSkills from "../components/Skills/XSkills";
+import XExperience from "../components/Experience/XExperience";
+import XWork from "../components/Works/XWorks";
+import XBlog from "../components/Blog/XBlog";
+import XFooter from "../components/footer/XFooter";
 
 export default function Home() {
   return (
     <div>
       <div className="container_ofolio">
         <div className="home">
-          <img src=".././styles/home/avatar-1.svg" />
+          <img src={AvatarIcon} />
           <h1 className="user-name">Bolby Doe</h1>
           <span>I'm a frontend developer</span>
           <ul className="social-icons">
@@ -44,6 +50,11 @@ export default function Home() {
         </div>
       </div>
       <XAbout />
+      <XSkills />
+      <XExperience />
+      <XWork />
+      <XBlog />
+      <XFooter />
     </div>
   );
 }

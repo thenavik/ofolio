@@ -10,6 +10,7 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 16px;
   line-height: 1.7;
+  font-weight: 400;
 }
 a {
   text-decoration: none;
@@ -31,13 +32,17 @@ li {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 10px;
 }
 
 .col_12 {
   flex: 0 0 100%;
   max-width: 100%;
+}
+.col_9 {
+  flex: 0 0 75%;
+  max-width: 75%;
 }
 .col_8 {
   flex: 0 0 66.6666%;
@@ -52,8 +57,8 @@ li {
   max-width: 25%;
 }
 .col_4 {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
+  flex: 0 0 27%;
+  max-width: 27%;
 }
 
 .container_ofolio {
@@ -86,5 +91,10 @@ li {
   .container_ofolio {
     width: 100%;
     margin: 0 auto;
+  }
+  .col_6,
+  .col_4 .col_3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 }

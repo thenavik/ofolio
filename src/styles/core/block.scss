@@ -1,0 +1,46 @@
+.bl-box {
+  width: 570px;
+}
+.block-inner {
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+  border-radius: 20px;
+
+  .block-body {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 20px 30px;
+    svg {
+      font-size: 24px;
+      color: #ff4c60;
+      font-weight: 200;
+    }
+    .block-content {
+      .time {
+        color: #8b88b1;
+        font-size: 14px;
+      }
+      .block-title {
+        font-size: 20px;
+        margin: 10px 0;
+        color: #454360;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (width: 992px) {
+  .bl-box {
+    width: 450px;
+  }
+}
+
+@media (width: 768px) {
+  .bl-box {
+    width: 100%;
+  }
+}

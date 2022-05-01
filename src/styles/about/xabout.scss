@@ -1,0 +1,146 @@
+.about {
+  padding-top: 110px;
+  position: relative;
+
+  .about-row {
+    display: flex;
+  }
+
+  .about-avatar {
+    width: 20%;
+  }
+  .about-body {
+    width: 80%;
+  }
+
+  .rounded {
+    padding: 30px;
+    box-shadow: 0px 5px 20px 0px rgb(69 67 96 / 10%);
+    background: #fff;
+    border-radius: 20px !important;
+    .about-body-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .left {
+      margin-right: 20px;
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #5e5c7f;
+      }
+    }
+
+    .right {
+      position: relative;
+      width: 100%;
+      padding-right: 15px;
+
+      .skiil-item {
+        .skill-header {
+          font-size: 16px;
+          font-weight: 500;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          h4 {
+            color: #454360;
+            margin: 20px 0;
+            line-height: 1.2;
+          }
+
+          span {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #5e5c7f;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about-body {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.spacer-70 {
+  height: 70px;
+}
+
+.facts-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+
+  svg {
+    font-size: 46px;
+    color: #dedeea;
+    float: left;
+  }
+
+  .fact-detail {
+    margin-left: 60px;
+
+    h3 {
+      font-size: 30px;
+      color: #454360;
+      font-weight: 700;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .about {
+    padding-top: 0 !important;
+  }
+  .about-row {
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+
+  .about-avatar {
+    width: 150px !important;
+    margin-bottom: 20px !important;
+  }
+  .about-body {
+    width: 100% !important;
+  }
+
+  .about-body-content {
+    flex-direction: column !important;
+  }
+  .facts-section {
+    width: auto !important;
+    padding: 0 10px !important;
+    justify-content: start !important;
+    align-items: flex-start !important;
+    flex-direction: column !important;
+
+    .facts-box {
+      margin-bottom: 25px !important;
+    }
+
+    .fact-detail {
+      margin-left: 60px;
+
+      h3 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.about-title {
+    font-size: 30px;
+    margin-left: 14px;
+    margin-bottom: 60px;
+
+    &::before {
+        content: "";
+    background-image: url('../../styles/mainheadline/dots-bg.svg');
+    display: block;
+    height: 37px;
+    left: -14px;
+    top: -14px;
+    position: relative;
+    width: 37px;
+    }
+
+    h2 {
+        color: #454360;
+        font-weight: 700;
+        line-height: 1.2;
+        text-align: left;
+    }
+}
