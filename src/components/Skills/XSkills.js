@@ -9,7 +9,7 @@ export default function XSkills() {
       <div className="skills">
         <div className="container_ofolio">
           <XMainHeadline title={"My Skills"} />
-          <div className="row">
+          <div className="skills-row">
             <XCard
               title={"UI/UX Designe"}
               bodyText={

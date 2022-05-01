@@ -24,14 +24,16 @@ ul {
 li {
   list-style: none;
 }
+.mt-2 {
+  margin-top: 2rem;
+}
 
 .row {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
-  align-items: center;
-  gap: 20px 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .col_12 {
@@ -55,8 +57,8 @@ li {
   max-width: 25%;
 }
 .col_4 {
-  flex: 0 0 33.3333%;
-  max-width: 33.3333%;
+  flex: 0 0 27%;
+  max-width: 27%;
 }
 
 .container_ofolio {
@@ -89,5 +91,10 @@ li {
   .container_ofolio {
     width: 100%;
     margin: 0 auto;
+  }
+  .col_6,
+  .col_4 .col_3 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
   }
 }

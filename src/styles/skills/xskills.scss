@@ -1,9 +1,17 @@
+.skills-row {
+  padding: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
 .skills-cta {
-    p {
-        text-align: center;
-        margin-top: 3rem;
-        a {
-            color: #ff4c60;
-        }
+  p {
+    text-align: center;
+    margin-top: 3rem;
+    a {
+      color: #ff4c60;
     }
+  }
 }

@@ -8,7 +8,7 @@ export default function XHeader() {
       <header className="header">
         <div className="container_ofolio">
           <nav className="navbar">
-            <a href="">
+            <a href="#" className="logo">
               <img src={OfolioLogo}></img>
             </a>
             <div className="menu">

@@ -9,7 +9,7 @@ export default function XBlog() {
         <div className="container_ofolio">
           <XMainHeadline title={"Latest Posts"} />
           <div className="posts-row">
-            <div className="col_4">
+            <div className="post-box">
               <div className="post-item">
                 <div className="post-img"></div>
                 <div className="post-details">
@@ -20,7 +20,7 @@ export default function XBlog() {
                 </div>
               </div>
             </div>
-            <div className="col_4">
+            <div className="post-box">
               <div className="post-item">
                 <div className="post-img"></div>
                 <div className="post-details">
@@ -31,7 +31,7 @@ export default function XBlog() {
                 </div>
               </div>
             </div>
-            <div className="col_4">
+            <div className="post-box">
               <div className="post-item">
                 <div className="post-img"></div>
                 <div className="post-details">

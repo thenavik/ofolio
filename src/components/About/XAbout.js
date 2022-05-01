@@ -14,14 +14,14 @@ export default function XAbout() {
       <div className="about">
         <div className="container_ofolio">
           <XMainHeadline title={"About Me"} />
-          <div className="row about-row">
-            <div className="col_3 about-avatar">
+          <div className="about-row">
+            <div className="about-avatar">
               <img src={AboutAvatar}></img>
             </div>
-            <div className="col_9 about-body">
+            <div className="about-body">
               <div className="rounded">
-                <div className="row about-body-content">
-                  <div className="col_6 left">
+                <div className="about-body-content">
+                  <div className="left">
                     <p>
                       I am Bolby Doe, web developer from London, United Kingdom.
                       I have rich experience in web site design and building and
@@ -29,7 +29,7 @@ export default function XAbout() {
                     </p>
                     <XButton name={"Download CV"} />
                   </div>
-                  <div className="col_6 right">
+                  <div className="right">
                     <div className="skiil-item">
                       <div className="skill-header">
                         <h4 className="skill-header-left">HTML</h4>
@@ -75,8 +75,8 @@ export default function XAbout() {
             </div>
           </div>
           <div className="spacer-70"></div>
-          <div className="row facts-section">
-            <div className="col_3">
+          <div className="facts-section">
+            <div className="facts-box">
               <div className="facts">
                 <div className="fact-icon">
                   <AiOutlineFire />
@@ -87,7 +87,7 @@ export default function XAbout() {
                 </div>
               </div>
             </div>
-            <div className="col_3">
+            <div className="facts-box">
               <div className="facts">
                 <div className="fact-icon">
                   <FiCoffee />
@@ -98,7 +98,7 @@ export default function XAbout() {
                 </div>
               </div>
             </div>
-            <div className="col_3">
+            <div className="facts-box">
               <div className="facts">
                 <div className="fact-icon">
                   <BiCodeAlt />
@@ -109,7 +109,7 @@ export default function XAbout() {
                 </div>
               </div>
             </div>
-            <div className="col_3">
+            <div className="facts-box">
               <div className="facts">
                 <div className="fact-icon">
                   <AiOutlineFieldTime />

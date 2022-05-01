@@ -1,11 +1,15 @@
 .experience-section {
-    padding-top: 100px;
+  padding-top: 100px;
 
-    .experience-row {
-
-        display: flex;
-        margin-right: -15px;
-        margin-left: -15px;
-        gap: 0px 10px;
-    }
+  .experience-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .experience-section {
+    padding: 0 10px !important;
+  }
 }

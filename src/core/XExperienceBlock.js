@@ -5,7 +5,7 @@ import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 export default function XExperienceBlock() {
   return (
     <>
-      <div className="col_6">
+      <div className="bl-box">
         <div className="block-inner">
           <div className="block-body">
             <div className="block-icons">
@@ -48,7 +48,7 @@ export default function XExperienceBlock() {
           </div>
         </div>
       </div>
-      <div className="col_6">
+      <div className="bl-box">
         <div className="block-inner">
           <div className="block-body">
             <div className="block-icons">
