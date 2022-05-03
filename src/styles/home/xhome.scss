@@ -1,16 +1,17 @@
 .home {
   margin: auto;
-  max-width: 540px;
   text-align: center;
   position: relative;
   z-index: 1;
   height: 100vh;
   margin-top: 150px;
-  img {
+
+  .avatar {
     max-width: 100%;
     height: auto;
     vertical-align: middle;
   }
+
   .user-name {
     color: #353353;
     font-size: 35px;
@@ -19,22 +20,26 @@
     margin: 20px 0px;
     text-align: center;
   }
+
   span {
     color: #454360;
     font-size: 16px;
     line-height: 1.7;
   }
+
   .social-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 1.5rem;
+
     .icons {
       font-size: 20px;
       margin-right: 1.5rem;
-      color: #353353;
+      color: #5e5c7f;
     }
   }
+
   .button {
     margin-top: 1.5rem;
     background: #ff4c60;
@@ -54,4 +59,17 @@
   .home {
     max-width: 400px;
   }
+}
+
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+
+  svg {
+    font-size: 30px;
+    color: #353353;
+  }  
 }
