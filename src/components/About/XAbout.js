@@ -1,5 +1,6 @@
 import React from "react";
 import XButton from "../../core/XButton";
+import { useSelector } from "react-redux";
 import XProgressBar from "../../core/XProgressBar";
 import AboutAvatar from "../../styles/about/avatar-2.svg";
 import "../../styles/about/xabout.scss";
@@ -8,67 +9,45 @@ import { FiCoffee } from "react-icons/fi";
 import { BiCodeAlt } from "react-icons/bi";
 import XMainHeadline from "../../core/XMainHeadline";
 
-export default function XAbout() {
+export default function XAbout({ page }) {
+  const users = useSelector((state) => state.users);
+  const user = users[page];
   return (
     <>
       <div className="about">
         <div className="container_ofolio">
-          <XMainHeadline title={"About Me"} />
+          <XMainHeadline title={"Обо мне"} />
           <div className="about-row">
             <div className="about-avatar">
-              <img src={AboutAvatar}></img>
+              <img src={user.userAvatar}></img>
             </div>
             <div className="about-body">
               <div className="rounded">
                 <div className="about-body-content">
                   <div className="left">
-                    <p>
-                      I am Bolby Doe, web developer from London, United Kingdom.
-                      I have rich experience in web site design and building and
-                      customization, also I am good at WordPress.{" "}
-                    </p>
-                    <XButton name={"Download CV"} />
+                    <p>{user.aboutMe}</p>
+                    <XButton name={"Download CV"} src={user.cv} />
                   </div>
                   <div className="right">
-                    <div className="skiil-item">
-                      <div className="skill-header">
-                        <h4 className="skill-header-left">HTML</h4>
-                        <span className="skill-header-right">80%</span>
-                      </div>
-                      <XProgressBar
-                        type={"primary-main-bcg"}
-                        width={"w100"}
-                        size={"default-progres-bar"}
-                        progressType={"warning"}
-                        progressWidth={"w80"}
-                      />
-                    </div>
-                    <div className="skiil-item">
-                      <div className="skill-header">
-                        <h4 className="skill-header-left">JavaScript</h4>
-                        <span className="skill-header-right">70%</span>
-                      </div>
-                      <XProgressBar
-                        type={"primary-main-bcg"}
-                        width={"w100"}
-                        size={"default-progres-bar"}
-                        progressType={"danger"}
-                        progressWidth={"w70"}
-                      />
-                    </div>
-                    <div className="skiil-item">
-                      <div className="skill-header">
-                        <h4 className="skill-header-left">CSS</h4>
-                        <span className="skill-header-right">90%</span>
-                      </div>
-                      <XProgressBar
-                        type={"primary-main-bcg"}
-                        width={"w100"}
-                        size={"default-progres-bar"}
-                        progressType={"primary"}
-                        progressWidth={"w90"}
-                      />
-                    </div>
+                    {user.skills?.map((el) => {
+                      return (
+                        <div className="skiil-item" key={el.id}>
+                          <div className="skill-header">
+                            <h4 className="skill-header-left">{el.title}</h4>
+                            <span className="skill-header-right">
+                              {el.progress}%
+                            </span>
+                          </div>
+                          <XProgressBar
+                            type={"primary-main-bcg"}
+                            width={"w100"}
+                            size={"default-progres-bar"}
+                            progressType={el.color}
+                            progressWidth={`w${el.progress}`}
+                          />
+                        </div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -82,8 +61,8 @@ export default function XAbout() {
                   <AiOutlineFire />
                 </div>
                 <div className="fact-detail">
-                  <h3 className="fact-munber">198</h3>
-                  <p>Projects completed</p>
+                  <h3 className="fact-munber">{user.projects.completed}</h3>
+                  <p>Завершенных проектов</p>
                 </div>
               </div>
             </div>
@@ -93,8 +72,8 @@ export default function XAbout() {
                   <FiCoffee />
                 </div>
                 <div className="fact-detail">
-                  <h3 className="fact-munber">5670</h3>
-                  <p>Cup of coffee</p>
+                  <h3 className="fact-munber">{user.projects.coffee}</h3>
+                  <p>чашка кофе</p>
                 </div>
               </div>
             </div>
@@ -104,8 +83,8 @@ export default function XAbout() {
                   <BiCodeAlt />
                 </div>
                 <div className="fact-detail">
-                  <h3 className="fact-munber">10300+</h3>
-                  <p>String of code</p>
+                  <h3 className="fact-munber">{user.projects.code}+</h3>
+                  <p>Строка кода</p>
                 </div>
               </div>
             </div>
@@ -115,8 +94,10 @@ export default function XAbout() {
                   <AiOutlineFieldTime />
                 </div>
                 <div className="fact-detail">
-                  <h3 className="fact-munber">2</h3>
-                  <p>Years of experience</p>
+                  <h3 className="fact-munber">
+                    {user.projects.yearsExperience}
+                  </h3>
+                  <p>Годы опыта</p>
                 </div>
               </div>
             </div>

@@ -1,13 +1,16 @@
 .btn-primary {
-    margin-top: 1.5rem;
-    background: #ff4c60;
+  margin-top: 1.5rem;
+  background: #ff4c60;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 32px;
+  line-height: 1;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  a {
     color: #fff;
-    outline: none;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 32px;
-    line-height: 1;
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
+  }
 }
