@@ -11,12 +11,13 @@ export default function XWork() {
         <div className="container_ofolio">
           <XMainHeadline title={"Recent Works"} />
           <div className="works-row">
-            <XWorkExample title={"WORK 1"} />
-            <XWorkExample title={"WORK 2"} />
-            <XWorkExample title={"WORK 3"} />
-            <XWorkExample title={"WORK 4"} />
-            <XWorkExample title={"WORK 5"} />
-            <XWorkExample title={"WORK 6"} />
+            <XWorkExample projectName={"Work example #1"} />
+            <XWorkExample projectName={"Work example #1"} />
+            <XWorkExample projectName={"Work example #1"} />
+            <XWorkExample projectName={"Work example #1"} />
+            <XWorkExample projectName={"Work example #1"} />
+            <XWorkExample projectName={"Work example #1"} />
+            <XWorkExample projectName={"Work example #1"} />
           </div>
           <div className="load-more">
             <XButton name={"Load More"} />
