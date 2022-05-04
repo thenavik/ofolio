@@ -10,7 +10,7 @@ export default function XSkills({ page }) {
   const user = users[page];
   return (
     <>
-      <div className="skills">
+      <div className="skills" id="skills">
         <div className="container_ofolio">
           <XMainHeadline title="Мои навыки" />
           <div className="skills-row">

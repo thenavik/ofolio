@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../styles/header/xheader.scss";
 import { Link } from "react-router-dom";
 import OfolioLogo from "../Header/ofolio.png";
 
 export default function XHeader() {
+  const [activeTab, setActiveTab] = useState("");
+
+  const handleClickMenu = (title) => {
+    setActiveTab(title);
+  };
+
+  const menuList = [
+    { title: "Главная", href: "#home" },
+    { title: "Обо мне", href: "#about" },
+    { title: "Навыки", href: "#skills" },
+    { title: "Работы", href: "#works" },
+  ];
   return (
     <>
       <header className="header">
@@ -14,41 +26,26 @@ export default function XHeader() {
             </Link>
             <div className="menu">
               <ul className="menu-list">
-                <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Главная
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Обо мне
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Навыки
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Опыт
-                  </Link>
-                </li>
-                <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Работы
-                  </Link>
-                </li>
-                {/* <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Blog
-                  </Link>
-                </li> */}
-                {/* <li className="menu-item">
-                  <Link to="#" className="menu-link">
-                    Contact
-                  </Link>
-                </li> */}
+                {menuList?.map((el, i) => {
+                  return (
+                    <li
+                      className="menu-item"
+                      key={el.title + i}
+                      onClick={() => handleClickMenu(el.title)}
+                    >
+                      <a
+                        href={el.href}
+                        className={
+                          activeTab !== el.title
+                            ? "menu-link"
+                            : "menu-link active"
+                        }
+                      >
+                        {el.title}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </nav>
