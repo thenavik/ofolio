@@ -6,6 +6,13 @@
   height: 100vh;
   margin-top: 150px;
 
+  .user-avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
   .avatar {
     max-width: 100%;
     height: auto;
@@ -61,7 +68,6 @@
   }
 }
 
-
 .scroll {
   display: flex;
   flex-direction: column;
@@ -71,5 +77,5 @@
   svg {
     font-size: 30px;
     color: #353353;
-  }  
+  }
 }
