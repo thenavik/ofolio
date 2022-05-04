@@ -6,7 +6,7 @@ import XAbout from "../components/About/XAbout";
 import XSkills from "../components/Skills/XSkills";
 import XExperience from "../components/Experience/XExperience";
 import XWork from "../components/Works/XWorks";
-import XFooter from "../components/footer/XFooter";
+import XFooter from "../components/Footer/XFooter";
 
 export default function Home({ page }) {
   const users = useSelector((state) => state.users);

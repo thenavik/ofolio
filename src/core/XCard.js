@@ -6,7 +6,8 @@ export default function XCard({ type, title, bodyText, icon }) {
     <>
       <div className={"skill-box " + type}>
         <div className="skills-box-inner">
-          <img src={icon} alt="icon card"></img>
+          {/* <img src={icon} alt="icon card"></img> */}
+          {icon}
           <h3 className="skill-box-title">{title}</h3>
           <p className="skill-box-content">{bodyText}</p>
         </div>
