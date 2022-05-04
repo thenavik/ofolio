@@ -12,7 +12,7 @@ export default function XWork(props) {
     <>
       <div className="work-section">
         <div className="container_ofolio">
-          <XMainHeadline title={"Recent Works"} />
+          <XMainHeadline title={"Примеры работ"} />
           <div className="works-row">
             {user.works?.map((el) => {
               return (

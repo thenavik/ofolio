@@ -16,39 +16,39 @@ export default function XHeader() {
               <ul className="menu-list">
                 <li className="menu-item">
                   <Link to="#" className="menu-link">
-                    Home
+                    Главная
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link to="#" className="menu-link">
-                    About
+                    Обо мне
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link to="#" className="menu-link">
-                    Skills
+                    Навыки
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link to="#" className="menu-link">
-                    Experience
+                    Опыт
                   </Link>
                 </li>
                 <li className="menu-item">
                   <Link to="#" className="menu-link">
-                    Works
+                    Работы
                   </Link>
                 </li>
-                <li className="menu-item">
+                {/* <li className="menu-item">
                   <Link to="#" className="menu-link">
                     Blog
                   </Link>
-                </li>
-                <li className="menu-item">
+                </li> */}
+                {/* <li className="menu-item">
                   <Link to="#" className="menu-link">
                     Contact
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

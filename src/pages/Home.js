@@ -21,7 +21,7 @@ export default function Home({ page }) {
             alt={user.userAvatar}
           />
           <h1 className="user-name">{user.name}</h1>
-          <span>I'm a {user.profession} developer</span>
+          <span>{user.profession}</span>
           <ul className="social-icons">
             {user.social?.map((el) => {
               return (
@@ -31,9 +31,9 @@ export default function Home({ page }) {
               );
             })}
           </ul>
-          <button className="button">Contact Me</button>
+          <button className="button">Контакты</button>
           <div className="scroll">
-            <p>Scroll Down</p>
+            <p>Прокрутите вниз</p>
             <CgScrollV />
           </div>
         </div>

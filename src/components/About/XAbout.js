@@ -25,7 +25,7 @@ export default function XAbout({ page }) {
                 <div className="about-body-content">
                   <div className="left">
                     <p>{user.aboutMe}</p>
-                    <XButton name={"Download CV"} src={user.cv} />
+                    <XButton name={"Показать CV"} src={user.cv} />
                   </div>
                   <div className="right">
                     {user.skills?.map((el) => {
