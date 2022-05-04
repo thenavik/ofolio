@@ -14,14 +14,7 @@ export default function XSkills({ page }) {
           <XMainHeadline title={"My Skills"} />
           <div className="skills-row">
             {user.skillsMe?.map((el) => {
-              return (
-                <XCard
-                  title={el.title}
-                  bodyText={el.info}
-                  type={el.color}
-                  key={el.id}
-                />
-              );
+              return <XCard title={el.title} type={el.color} key={el.id} />;
             })}
           </div>
           <div className="skills-cta">

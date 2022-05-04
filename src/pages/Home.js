@@ -10,7 +10,8 @@ import XSkills from "../components/Skills/XSkills";
 import XExperience from "../components/Experience/XExperience";
 import XWork from "../components/Works/XWorks";
 import XBlog from "../components/Blog/XBlog";
-import XFooter from "../components/Footer/XFooter";
+import XFooter from "../components/footer/XFooter";
+
 // import Particles from "react-particles-js";
 
 export default function Home({ page }) {

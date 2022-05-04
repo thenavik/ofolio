@@ -111,8 +111,8 @@ const initialState = [
     ],
   },
   {
-    name: "Navruz Dalerovich",
-    profession: "Front-End",
+    name: "Navruzshoh Daleri",
+    profession: "Frontend Developer",
     userAvatar:
       "http://html.phoenixcoded.net/bolby/angular/assets/images/avatar-2.svg",
     social: [
