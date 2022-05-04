@@ -10,7 +10,7 @@ export default function XWork(props) {
   const user = users[props.page];
   return (
     <>
-      <div className="work-section">
+      <div className="work-section" id="works">
         <div className="container_ofolio">
           <XMainHeadline title={"Примеры работ"} />
           <div className="works-row">

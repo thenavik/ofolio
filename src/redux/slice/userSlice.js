@@ -12,6 +12,7 @@ const initialState = [
     profession: "Front-End разработчик",
     contact: "https://t.me/+992881070990",
     userAvatar: jovidAvatar,
+    username: "jovid",
     social: [
       {
         id: 1,
@@ -125,13 +126,13 @@ const initialState = [
         id: 1,
         title: "JavaScript",
         color: "bg-yellow",
-        icon: <MdWorkOutline />,
+        icon: <IoLogoJavascript />,
       },
       {
         id: 2,
         title: "React",
         color: "bg-blue",
-        icon: <MdWorkOutline />,
+        icon: <IoLogoJavascript />,
       },
       {
         id: 3,
@@ -214,6 +215,7 @@ const initialState = [
     profession: "Джуниор фронтенд разработчик",
     contact: "https://t.me/iamdigitalist",
     userAvatar: navruzAva,
+    username: "navruz",
     social: [
       {
         id: 1,

@@ -7,12 +7,14 @@ import XSkills from "../components/Skills/XSkills";
 import XExperience from "../components/Experience/XExperience";
 import XWork from "../components/Works/XWorks";
 import XFooter from "../components/Footer/XFooter";
+import XHeader from "../components/Header/XHeader";
 
 export default function Home({ page }) {
   const users = useSelector((state) => state.users);
   const user = users[page];
   return (
-    <div>
+    <div id="home">
+      <XHeader />
       <div className="container_ofolio">
         <div className="home">
           <img

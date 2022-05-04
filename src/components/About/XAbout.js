@@ -13,7 +13,7 @@ export default function XAbout({ page }) {
   const user = users[page];
   return (
     <>
-      <div className="about">
+      <div className="about" id="about">
         <div className="container_ofolio">
           <XMainHeadline title={"Обо мне"} />
           <div className="about-row">
