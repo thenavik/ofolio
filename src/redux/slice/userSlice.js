@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { FaTelegram, FaLinkedinIn } from "react-icons/fa";
+import jovidAvatar from "../../assets/avatar/jovid.jpg";
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 
@@ -8,8 +9,7 @@ const initialState = [
     name: "Jovid Masharipov",
     profession: "Front-End",
     contact: "https://t.me/+992881070990",
-    userAvatar:
-      "http://html.phoenixcoded.net/bolby/angular/assets/images/avatar-2.svg",
+    userAvatar: jovidAvatar,
     social: [
       {
         id: 1,
@@ -90,23 +90,88 @@ const initialState = [
       {
         id: 1,
         title: "JavaScript",
-        color: "bg-blue",
-        progress: "10",
-        info: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+        color: "bg-yellow",
+        icon: "https://img.icons8.com/ios/2x/javascript.png",
       },
       {
         id: 2,
         title: "React",
-        color: "bg-yellow",
-        progress: "90",
-        info: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+        color: "bg-blue",
+        icon: "https://img.icons8.com/color/2x/react-native.png",
       },
       {
         id: 3,
         title: "Next",
+        color: "bg-dark",
+        icon: "https://static-00.iconduck.com/assets.00/next-dot-js-icon-96x96-0v0zvdwz.png",
+      },
+      {
+        id: 4,
+        title: "Redux-toolkit",
         color: "bg-pink",
-        progress: "60",
-        info: "Lorem ipsum dolor sit amet consectetuer adipiscing elit aenean commodo ligula eget.",
+        icon: "https://img.icons8.com/color/2x/redux.png",
+      },
+      {
+        id: 5,
+        title: "Scss",
+        color: "bg-pink",
+        icon: "https://img.icons8.com/ios/2x/sass.png",
+      },
+      {
+        id: 6,
+        title: "Node",
+        color: "bg-blue",
+        icon: "https://img.icons8.com/color/2x/nodejs.png",
+      },
+      {
+        id: 7,
+        title: "Bootstrap",
+        color: "bg-pink",
+        icon: "https://img.icons8.com/color/2x/bootstrap.png",
+      },
+    ],
+    works: [
+      {
+        id: 1,
+        title: "darova",
+        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image:
+          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+      },
+      {
+        id: 2,
+        title: "hello bro",
+        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image:
+          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+      },
+      {
+        id: 3,
+        title: "hello bro",
+        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image:
+          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+      },
+      {
+        id: 4,
+        title: "hello bro",
+        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image:
+          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+      },
+      {
+        id: 5,
+        title: "hello bro",
+        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image:
+          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+      },
+      {
+        id: 6,
+        title: "hello bro",
+        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image:
+          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
       },
     ],
   },

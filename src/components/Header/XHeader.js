@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/header/xheader.scss";
+import { Link } from "react-router-dom";
 import OfolioLogo from "../Header/ofolio.png";
 
 export default function XHeader() {
@@ -8,45 +9,45 @@ export default function XHeader() {
       <header className="header">
         <div className="container_ofolio">
           <nav className="navbar">
-            <a href="#" className="logo">
-              <img src={OfolioLogo}></img>
-            </a>
+            <Link to="#" className="logo">
+              <img src={OfolioLogo} alt={OfolioLogo}></img>
+            </Link>
             <div className="menu">
               <ul className="menu-list">
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     About
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     Skills
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     Experience
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     Works
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="#" className="menu-link">
+                  <Link to="#" className="menu-link">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
