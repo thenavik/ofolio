@@ -2,7 +2,6 @@ import React from "react";
 import XButton from "../../core/XButton";
 import { useSelector } from "react-redux";
 import XProgressBar from "../../core/XProgressBar";
-import AboutAvatar from "../../styles/about/avatar-2.svg";
 import "../../styles/about/xabout.scss";
 import { AiOutlineFire, AiOutlineFieldTime } from "react-icons/ai";
 import { FiCoffee } from "react-icons/fi";
@@ -19,7 +18,7 @@ export default function XAbout({ page }) {
           <XMainHeadline title={"Обо мне"} />
           <div className="about-row">
             <div className="about-avatar">
-              <img src={user.userAvatar}></img>
+              <img src={user.userAvatar} alt={user.userAvatar}></img>
             </div>
             <div className="about-body">
               <div className="rounded">
@@ -73,7 +72,7 @@ export default function XAbout({ page }) {
                 </div>
                 <div className="fact-detail">
                   <h3 className="fact-munber">{user.projects.coffee}</h3>
-                  <p>чашка кофе</p>
+                  <p>Чашки кофе</p>
                 </div>
               </div>
             </div>
@@ -84,7 +83,7 @@ export default function XAbout({ page }) {
                 </div>
                 <div className="fact-detail">
                   <h3 className="fact-munber">{user.projects.code}+</h3>
-                  <p>Строка кода</p>
+                  <p>Строк кода</p>
                 </div>
               </div>
             </div>

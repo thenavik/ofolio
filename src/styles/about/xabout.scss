@@ -8,6 +8,13 @@
 
   .about-avatar {
     width: 20%;
+
+    img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
   }
   .about-body {
     width: 80%;
