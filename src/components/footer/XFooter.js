@@ -6,7 +6,7 @@ export default function () {
     <>
       <footer>
         <span>
-          Created by <a href="#">Repost Space</a>
+          Made with ♥ by <a href="#">Repost Space</a>
         </span>
       </footer>
     </>
