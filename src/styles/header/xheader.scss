@@ -56,21 +56,23 @@
       content: "";
       right: -100%;
       width: 100%;
-      min-height: 1100px;
+      height: 120vh;
+      top: -30px;
       background: #3030306b;
       transition: 1s ease-in-out;
 
       .mobile__menu-list {
         position: absolute;
         content: "";
-        top: 600px;
+        top: 100px;
         left: 20px;
         font-weight: 600;
         .mobile__menu-item {
           width: 250px;
-          height: 25px;
+          height: 40px;
           margin: 10px 0;
           .mobile__menu-link {
+            font-size: 22px;
             color: #ffff;
             cursor: pointer;
             &:active {
