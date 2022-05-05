@@ -61,7 +61,7 @@ export default function XAbout({ page }) {
                 </div>
                 <div className="fact-detail">
                   <h3 className="fact-munber">{user.projects.completed}</h3>
-                  <p>Завершенных проектов</p>
+                  <p>Завершенных проекта</p>
                 </div>
               </div>
             </div>

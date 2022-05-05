@@ -2,9 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import { FaTelegram, FaLinkedinIn, FaNode } from "react-icons/fa";
 import jovidAvatar from "../../assets/avatar/jovid.jpg";
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiFigma } from "react-icons/fi";
 import navruzAva from "../../img/avatar-navruz.png";
 import { IoLogoJavascript } from "react-icons/io";
+import { FaCss3 } from "react-icons/fa";
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { DiPhotoshop } from "react-icons/di";
 import {
   SiRedux,
   SiNextdotjs,
@@ -241,7 +244,7 @@ const initialState = [
       },
     ],
     aboutMe:
-      "Привет, меня зовут Наврузшох. Я Junor Веб разработчик из России. У меня есть опыть в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб сайтов на React и хорошо разбираюсь в верстке.",
+      "Привет, меня зовут Наврузшох. Я Junor Веб разработчик из России. У меня есть опыт в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб-сайтов на React и хорошо разбираюсь в верстке.",
     cv: "https://t.me/+992881070990",
     skills: [
       {
@@ -354,33 +357,39 @@ const initialState = [
       },
       {
         id: 3,
-        title: "Next",
-        color: "bg-dark",
-        icon: <SiNextdotjs />,
+        title: "HTML",
+        color: "bg-yellow",
+        icon: <AiOutlineHtml5 />,
       },
       {
         id: 4,
-        title: "Redux-toolkit",
-        color: "bg-pink",
-        icon: <SiRedux />,
+        title: "CSS",
+        color: "bg-blue",
+        icon: <FaCss3 />,
       },
       {
         id: 5,
-        title: "Scss",
-        color: "bg-pink",
+        title: "SCSS",
+        color: "bg-yellow",
         icon: <SiSass />,
       },
       {
         id: 6,
-        title: "Node",
+        title: "Figma",
         color: "bg-blue",
-        icon: <FaNode />,
+        icon: <FiFigma />,
       },
       {
         id: 7,
         title: "Bootstrap",
-        color: "bg-pink",
+        color: "bg-yellow",
         icon: <SiBootstrap />,
+      },
+      {
+        id: 8,
+        title: "Photoshop",
+        color: "bg-blue",
+        icon: <DiPhotoshop />,
       },
     ],
     works: [
