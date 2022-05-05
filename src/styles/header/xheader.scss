@@ -10,6 +10,7 @@
   z-index: 1030;
 
   .menu-icon {
+    display: none;
     position: absolute;
     content: "";
     z-index: 99999;
@@ -50,6 +51,7 @@
       }
     }
     .mobile-menu {
+      display: none;
       position: absolute;
       content: "";
       right: -100%;
@@ -98,10 +100,22 @@
   .menu-item {
     padding-right: 20px !important;
   }
+  .mobile-menu {
+    display: block !important;
+  }
+  .menu-icon {
+    display: block !important;
+  }
 }
 
 @media (max-width: 560px) {
   .menu-list {
     display: none !important;
+  }
+  .mobile-menu {
+    display: block !important;
+  }
+  .menu-icon {
+    display: block !important;
   }
 }

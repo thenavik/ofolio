@@ -1,10 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { FaTelegram, FaLinkedinIn } from "react-icons/fa";
+import { FaTelegram, FaLinkedinIn, FaNode } from "react-icons/fa";
 import jovidAvatar from "../../assets/avatar/jovid.jpg";
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 import { FiGithub } from "react-icons/fi";
 import navruzAva from "../../img/avatar-navruz.png";
 import { IoLogoJavascript } from "react-icons/io";
+import {
+  SiRedux,
+  SiNextdotjs,
+  SiReact,
+  SiBootstrap,
+  SiSass,
+} from "react-icons/si";
 
 const initialState = [
   {
@@ -132,37 +139,37 @@ const initialState = [
         id: 2,
         title: "React",
         color: "bg-blue",
-        icon: <IoLogoJavascript />,
+        icon: <SiReact />,
       },
       {
         id: 3,
         title: "Next",
         color: "bg-dark",
-        icon: <MdWorkOutline />,
+        icon: <SiNextdotjs />,
       },
       {
         id: 4,
         title: "Redux-toolkit",
         color: "bg-pink",
-        icon: <MdWorkOutline />,
+        icon: <SiRedux />,
       },
       {
         id: 5,
         title: "Scss",
         color: "bg-pink",
-        icon: <MdWorkOutline />,
+        icon: <SiSass />,
       },
       {
         id: 6,
         title: "Node",
         color: "bg-blue",
-        icon: <MdWorkOutline />,
+        icon: <FaNode />,
       },
       {
         id: 7,
         title: "Bootstrap",
         color: "bg-pink",
-        icon: <MdWorkOutline />,
+        icon: <SiBootstrap />,
       },
     ],
     works: [
@@ -337,43 +344,43 @@ const initialState = [
         id: 1,
         title: "JavaScript",
         color: "bg-yellow",
-        icon: <MdWorkOutline />,
+        icon: <IoLogoJavascript />,
       },
       {
         id: 2,
         title: "React",
         color: "bg-blue",
-        icon: <MdWorkOutline />,
+        icon: <SiReact />,
       },
       {
         id: 3,
         title: "Next",
         color: "bg-dark",
-        icon: <MdWorkOutline />,
+        icon: <SiNextdotjs />,
       },
       {
         id: 4,
         title: "Redux-toolkit",
         color: "bg-pink",
-        icon: <MdWorkOutline />,
+        icon: <SiRedux />,
       },
       {
         id: 5,
         title: "Scss",
         color: "bg-pink",
-        icon: <MdWorkOutline />,
+        icon: <SiSass />,
       },
       {
         id: 6,
         title: "Node",
         color: "bg-blue",
-        icon: <MdWorkOutline />,
+        icon: <FaNode />,
       },
       {
         id: 7,
         title: "Bootstrap",
         color: "bg-pink",
-        icon: <MdWorkOutline />,
+        icon: <SiBootstrap />,
       },
     ],
     works: [
