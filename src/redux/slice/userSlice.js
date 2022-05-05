@@ -31,7 +31,7 @@ const initialState = [
       },
     ],
     aboutMe:
-      "Привет, меня зовут Джовид. Я фронтенд разработчик. Есть 1.2 год коммерческий опыта , Уже как год 2 прошло на изучение фронтенда - .Успел освоить: - адаптивную верстку; - работа с объектами, асинхронный JS, работа с DOM, localStorage; - Material UI, Bootstrap; - React, Redux, REST API; - Препроцессор SASS; - Node.js; -Express.js; -MongoDB;.",
+      "Привет, меня зовут Джовид. Я фронтенд разработчик. Есть 1 год 2 мес коммерческого опыта , Уже 2 года прошло на изучение фронтенда - .Успел освоить: - адаптивную верстку; - работа с объектами, асинхронный JS, работа с DOM, localStorage; - Material UI, Bootstrap; - React, Redux, REST API; - Препроцессор SASS; - Node.js; -Express.js; -MongoDB;.",
     cv: "https://t.me/+992881070990",
     skills: [
       {
@@ -118,8 +118,8 @@ const initialState = [
     projects: {
       completed: 8,
       coffee: 2341,
-      code: 43788,
-      yearsExperience: 1.3,
+      code: 23788,
+      yearsExperience: 1.2,
     },
     skillsMe: [
       {
