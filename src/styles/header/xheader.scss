@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background: #f9f9ff;
   border-bottom: 1px solid rgba($color: #000000, $alpha: 0.05);
   padding: 20px 0;
@@ -7,10 +8,24 @@
   right: 0;
   left: 0;
   z-index: 1030;
+
+  .menu-icon {
+    position: absolute;
+    content: "";
+    z-index: 99999;
+    right: 10px;
+    svg {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
   .active {
     color: blue;
   }
+
   .navbar {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -34,6 +49,48 @@
         }
       }
     }
+    .mobile-menu {
+      position: absolute;
+      content: "";
+      right: -100%;
+      width: 100%;
+      min-height: 1100px;
+      background: #3030306b;
+      transition: 1s ease-in-out;
+
+      .mobile__menu-list {
+        position: absolute;
+        content: "";
+        top: 600px;
+        left: 20px;
+        font-weight: 600;
+        .mobile__menu-item {
+          width: 250px;
+          height: 25px;
+          margin: 10px 0;
+          .mobile__menu-link {
+            color: #ffff;
+            cursor: pointer;
+            &:active {
+              color: blue;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.activeMenu {
+  transition: 1s ease-in-out !important;
+  position: absolute !important;
+  right: 0 !important;
+}
+.activeMenuIcon {
+  svg {
+    width: 35px;
+    height: 35px;
+    color: #fff;
   }
 }
 
