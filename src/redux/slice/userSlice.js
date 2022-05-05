@@ -14,6 +14,7 @@ import {
   SiReact,
   SiBootstrap,
   SiSass,
+  SiMongodb,
 } from "react-icons/si";
 
 const initialState = [
@@ -170,9 +171,33 @@ const initialState = [
       },
       {
         id: 7,
+        title: "MongoDB",
+        color: "bg-dark",
+        icon: <SiMongodb />,
+      },
+      {
+        id: 8,
         title: "Bootstrap",
-        color: "bg-pink",
+        color: "bg-blue",
         icon: <SiBootstrap />,
+      },
+      {
+        id: 9,
+        title: "Css",
+        color: "bg-pink",
+        icon: <FaCss3 />,
+      },
+      {
+        id: 10,
+        title: "Express",
+        color: "bg-yellow",
+        icon: <FaNode />,
+      },
+      {
+        id: 11,
+        title: "Верстка",
+        color: "bg-dark",
+        icon: <FaCss3 />,
       },
     ],
     works: [

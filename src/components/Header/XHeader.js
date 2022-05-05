@@ -10,6 +10,7 @@ export default function XHeader() {
 
   const handleClickMenu = (title) => {
     setActiveTab(title);
+    setMenu(false);
   };
 
   const toggleMenu = () => {
