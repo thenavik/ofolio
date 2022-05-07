@@ -430,7 +430,7 @@ const initialState = [
       },
       {
         id: 2,
-        title: "Дизайн Фигма",
+        title: "Дизайн Фигма (Onepage)",
         href: "https://www.figma.com/community/file/1104321789433318797",
         image: Work5,
       },
