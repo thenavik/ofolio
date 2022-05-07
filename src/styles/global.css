@@ -25,6 +25,10 @@ ul {
 li {
   list-style: none;
 }
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 .mt-2 {
   margin-top: 2rem;
 }

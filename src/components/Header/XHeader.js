@@ -9,6 +9,7 @@ export default function XHeader() {
   const [menu, setMenu] = useState(false);
 
   const handleClickMenu = (title) => {
+    enableScroll();
     setActiveTab(title);
     setMenu(false);
   };
@@ -16,8 +17,10 @@ export default function XHeader() {
   const toggleMenu = () => {
     if (menu) {
       setMenu(false);
+      enableScroll();
     } else {
       setMenu(true);
+      disableScroll();
     }
   };
 
@@ -27,6 +30,14 @@ export default function XHeader() {
     { title: "Навыки", href: "#skills" },
     { title: "Работы", href: "#works" },
   ];
+
+  const disableScroll = () => {
+    document.body.classList.add("stop-scrolling");
+  };
+
+  const enableScroll = () => {
+    document.body.classList.remove("stop-scrolling");
+  };
 
   return (
     <>
@@ -50,7 +61,10 @@ export default function XHeader() {
                     <li
                       className="menu-item"
                       key={el.title + i}
-                      onClick={() => handleClickMenu(el.title)}
+                      onClick={() => {
+                        handleClickMenu(el.title);
+                        disableScroll();
+                      }}
                     >
                       <a
                         href={el.href}

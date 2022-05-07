@@ -1,10 +1,18 @@
 .skill-box {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   transform: translateY(0);
-  transition: all 0.3 ease-in-out;
+  transition: 0.5s ease-in-out;
   text-align: center;
   color: #fff;
+  margin-top: 0;
+  cursor: pointer;
+
+  &:hover {
+    // transition: 0.5s ease-in-out;
+    margin-top: -15px;
+  }
 
   .skill-box-inner {
     h3 {
@@ -42,6 +50,7 @@
   .skill-box {
     padding: 20px !important;
     border-radius: 12px !important;
+    cursor: default !important;
   }
   // .skill-box {
   //   width: 100% !important;
