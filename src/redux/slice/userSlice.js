@@ -16,6 +16,10 @@ import {
   SiSass,
   SiMongodb,
 } from "react-icons/si";
+import Work5 from "../../img/work-5.webp";
+import Work2 from "../../img/work-2.webp";
+import Work3 from "../../img/work-3.png";
+import Work4 from "../../img/work-4.jpg";
 
 const initialState = [
   {
@@ -420,38 +424,33 @@ const initialState = [
     works: [
       {
         id: 1,
-        title: "darova",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "Старница логин (минимализм)",
+        href: "https://www.figma.com/community/file/1103268879672112747/Login-Page",
+        image: Work2,
       },
       {
         id: 2,
-        title: "hello bro",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "Дизайн Фигма",
+        href: "https://www.figma.com/community/file/1104321789433318797",
+        image: Work5,
       },
       {
         id: 3,
-        title: "hello bro",
+        title: "Таймер (onepage)",
         href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image: Work3,
       },
       {
         id: 4,
-        title: "hello bro",
+        title: "Минималистичный блог",
         href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image: Work4,
       },
       {
         id: 5,
         title: "hello bro",
         href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        image: Work3,
       },
       {
         id: 6,

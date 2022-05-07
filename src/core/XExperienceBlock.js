@@ -16,7 +16,7 @@ export default function XExperienceBlock(props) {
                 <div className="block-icons">{el.icon}</div>
                 <div className="block-content">
                   <span className="time">
-                    {el.start} , {el.end}
+                    {el.start}, {el.end}
                   </span>
                   <h3 className="block-title">{el.title}</h3>
                   <p className="block-text">{el.info}</p>
@@ -34,7 +34,7 @@ export default function XExperienceBlock(props) {
                 <div className="block-icons">{el.icon}</div>
                 <div className="block-content">
                   <span className="time">
-                    {el.start} - {el.end}
+                    {el.start}, {el.end}
                   </span>
                   <h3 className="block-title">{el.title}</h3>
                   <p className="block-text">{el.info}</p>
