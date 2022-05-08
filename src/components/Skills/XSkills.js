@@ -28,9 +28,9 @@ export default function XSkills({ page }) {
           <div className="skills-cta">
             <p>
               Ищете индивидуальную работу?{" "}
-              <Link to={user.contact} target="_blank">
+              <a href={user.contact} target="_blank">
                 Нажмите здесь
-              </Link>{" "}
+              </a>{" "}
               чтобы связаться со мной! 👋
             </p>
           </div>
