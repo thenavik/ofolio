@@ -21,6 +21,13 @@ import Work2 from "../../img/work-2.webp";
 import Work3 from "../../img/work-3.png";
 import Work4 from "../../img/work-4.jpg";
 
+import workj1 from "../../assets/work/payment.jpg";
+import workj2 from "../../assets/work/todo.png";
+import workj3 from "../../assets/work/vs.jpg";
+// cv
+import jovidcv from "../../assets/cv/jovid.pdf";
+import navruzcv from "../../assets/cv/navruz.pdf";
+
 const initialState = [
   {
     name: "Jovid Masharipov",
@@ -47,7 +54,7 @@ const initialState = [
     ],
     aboutMe:
       "Привет, меня зовут Джовид. Я фронтенд разработчик. Есть 1 год 2 мес коммерческого опыта , Уже 2 года прошло на изучение фронтенда - .Успел освоить: - адаптивную верстку; - работа с объектами, асинхронный JS, работа с DOM, localStorage; - Material UI, Bootstrap; - React, Redux, REST API; - Препроцессор SASS; - Node.js; -Express.js; -MongoDB;.",
-    cv: "https://t.me/+992881070990",
+    cv: jovidcv,
     skills: [
       {
         id: 1,
@@ -133,7 +140,7 @@ const initialState = [
     projects: {
       completed: 8,
       coffee: 2341,
-      code: 23788,
+      code: 9987,
       yearsExperience: 1.2,
     },
     skillsMe: [
@@ -207,45 +214,39 @@ const initialState = [
     works: [
       {
         id: 1,
-        title: "darova",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "Много функциональный строительный сайт",
+        href: "https://tojmemor.tj/",
+        image: Work3,
       },
       {
         id: 2,
-        title: "hello bro",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "Cтроительный сайт",
+        href: "https://vose-construction.tj/",
+        image: workj3,
       },
       {
         id: 3,
-        title: "hello bro",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "Много функциональный строительный сайт",
+        href: "https://armon.tj/",
+        image: Work4,
       },
       {
         id: 4,
-        title: "hello bro",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "React payment system (UI-UX)",
+        href: "https://payment.ofolio.ru/",
+        image: workj1,
       },
       {
         id: 5,
-        title: "hello bro",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "Repost Space Agency",
+        href: "https://repost.ofolio.ru/",
+        image: Work2,
       },
       {
         id: 6,
-        title: "hello bro",
-        href: "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
-        image:
-          "https://www.programmerszone.ae/wp-content/uploads/2021/10/programming-evolution.jpg",
+        title: "React Todo List",
+        href: "https://react-todo.ofolio.ru/",
+        image: workj2,
       },
     ],
   },
@@ -274,7 +275,7 @@ const initialState = [
     ],
     aboutMe:
       "Привет, меня зовут Наврузшох. Я Junor Веб разработчик из России. У меня есть опыт в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб-сайтов на React и хорошо разбираюсь в верстке.",
-    cv: "https://t.me/+992881070990",
+    cv: navruzcv,
     skills: [
       {
         id: 1,
