@@ -1,5 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { FaTelegram, FaLinkedinIn, FaNode } from "react-icons/fa";
+import {
+  FaTelegram,
+  FaLinkedinIn,
+  FaNode,
+  FaWhatsapp,
+  FaFigma,
+} from "react-icons/fa";
 import jovidAvatar from "../../assets/avatar/jovid.jpg";
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 import { FiGithub, FiFigma } from "react-icons/fi";
@@ -48,8 +54,8 @@ const initialState = [
       },
       {
         id: 3,
-        icon: <FaLinkedinIn />,
-        href: "https://www.instagram.com/jovid1242/",
+        icon: <FaWhatsapp />,
+        href: "https://wa.me/992881070990",
       },
     ],
     aboutMe:
@@ -269,8 +275,13 @@ const initialState = [
       },
       {
         id: 3,
-        icon: <FaLinkedinIn />,
-        href: "https://t.me/+992881070990",
+        icon: <FaFigma />,
+        href: "https://www.figma.com/@thenawik",
+      },
+      {
+        id: 4,
+        icon: <FaWhatsapp />,
+        href: "https://wa.me/",
       },
     ],
     aboutMe:

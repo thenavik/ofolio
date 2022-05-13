@@ -22,7 +22,7 @@
   }
 
   .active {
-    color: blue;
+    color: #ff4c60;
   }
 
   .navbar {
@@ -44,8 +44,12 @@
         padding-right: 3rem;
         .menu-link {
           cursor: pointer;
+          transition: all .3s ease;
+          &:hover {
+            color: #f9d74c;
+          }
           &:active {
-            color: blue;
+            color: #ff4c60;
           }
         }
       }
@@ -76,7 +80,7 @@
             color: #ffff;
             cursor: pointer;
             &:active {
-              color: blue;
+              color: #ff4c60;
             }
           }
         }
