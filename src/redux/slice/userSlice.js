@@ -140,7 +140,7 @@ const initialState = [
     projects: {
       completed: 8,
       coffee: 2341,
-      code: 23788,
+      code: 9987,
       yearsExperience: 1.2,
     },
     skillsMe: [
