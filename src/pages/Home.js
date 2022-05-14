@@ -6,8 +6,9 @@ import XAbout from "../components/About/XAbout";
 import XSkills from "../components/Skills/XSkills";
 import XExperience from "../components/Experience/XExperience";
 import XWork from "../components/Works/XWorks";
-import XFooter from "../components/Footer/XFooter";
+import XFooter from "../components/footer/XFooter";
 import XHeader from "../components/Header/XHeader";
+import AnimatedCursor from "react-animated-cursor";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -21,9 +22,35 @@ export default function Home({ page }) {
   }, []);
   return (
     <div id="home">
+      <AnimatedCursor
+        innerSize={10}
+        outerSize={30}
+        color="193, 11, 111"
+        outerAlpha={0.2}
+        innerScale={0.7}
+        outerScale={2}
+        clickables={[
+          "a",
+          'input[type="text"]',
+          'input[type="email"]',
+          'input[type="number"]',
+          'input[type="submit"]',
+          'input[type="image"]',
+          "label[for]",
+          "select",
+          "textarea",
+          "button",
+          ".link",
+        ]}
+      />
       <XHeader />
       <div className="container_ofolio">
         <div data-aos="fade-up">
+          <div className="canvas__fon">
+            <canvas id="canvasOne" width="900" height="520">
+              Your browser does not support HTML5 canvas.
+            </canvas>
+          </div>
           <div className="home">
             <img
               src={user.userAvatar}
