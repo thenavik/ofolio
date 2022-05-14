@@ -7,13 +7,13 @@
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
+  z-index: 99;
 
   .menu-icon {
     display: none;
     position: absolute;
     content: "";
-    z-index: 99999;
+    z-index: 100;
     right: 10px;
     svg {
       width: 35px;

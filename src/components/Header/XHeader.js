@@ -70,8 +70,8 @@ export default function XHeader() {
                         href={el.href}
                         className={
                           activeTab !== el.title
-                            ? "menu-link"
-                            : "menu-link active"
+                            ? "menu-link link"
+                            : "menu-link active link"
                         }
                       >
                         {el.title}

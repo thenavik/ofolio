@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/core/xcard.scss";
 
-export default function XCard({ type, title, bodyText, icon }) {
+export default function XCard({ type, title, bodyText, icon, classLink }) {
   return (
     <>
-      <div className={"skill-box " + type}>
+      <div className={"skill-box " + type + " " + classLink}>
         <div className="skills-box-inner">
           {/* <img src={icon} alt="icon card"></img> */}
           {icon}

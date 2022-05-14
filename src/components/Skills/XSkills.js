@@ -1,6 +1,5 @@
 import React from "react";
 import XCard from "../../core/XCard";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import XMainHeadline from "../../core/XMainHeadline";
 import "../../styles/skills/xskills.scss";
@@ -21,6 +20,7 @@ export default function XSkills({ page }) {
                   type={el.color}
                   key={el.id}
                   icon={el.icon}
+                  classLink="link"
                 />
               );
             })}
