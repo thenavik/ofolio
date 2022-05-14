@@ -1,6 +1,7 @@
 .btn-primary {
   margin-top: 1.5rem;
   background: #ff4c60;
+  box-shadow: 0px 4px 10px rgba($color: #ff4c60, $alpha: 0.25);
   color: #fff;
   outline: none;
   border: none;
@@ -10,7 +11,12 @@
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
+  transition: all .5s ease;
   a {
     color: #fff;
+  }
+  &:hover {
+    background-color: #5e5c7f;
+    box-shadow: 0px 4px 10px rgba($color: #5e5c7f, $alpha: 0.25);
   }
 }

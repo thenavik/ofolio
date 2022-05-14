@@ -1,13 +1,25 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { FaTelegram, FaLinkedinIn, FaNode } from "react-icons/fa";
+import {
+  FaTelegram,
+  FaLinkedinIn,
+  FaNode,
+  FaWhatsapp,
+  FaFigma,
+  FaVuejs,
+  FaPhp,
+  FaLaravel,
+  FaNodeJs,
+  FaDocker,
+} from "react-icons/fa";
 import jovidAvatar from "../../assets/avatar/jovid.jpg";
+import gholibAvatar from "../../assets/avatar/gholib.jpg";
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 import { FiGithub, FiFigma } from "react-icons/fi";
 import navruzAva from "../../img/avatar-navruz.png";
 import { IoLogoJavascript } from "react-icons/io";
 import { FaCss3 } from "react-icons/fa";
 import { AiOutlineHtml5 } from "react-icons/ai";
-import { DiPhotoshop } from "react-icons/di";
+import { DiPhotoshop, DiMysql, DiDatabase } from "react-icons/di";
 import {
   SiRedux,
   SiNextdotjs,
@@ -15,6 +27,8 @@ import {
   SiBootstrap,
   SiSass,
   SiMongodb,
+  SiTypescript,
+  SiNginx,
 } from "react-icons/si";
 import Work5 from "../../img/work-5.webp";
 import Work2 from "../../img/work-2.webp";
@@ -27,6 +41,7 @@ import workj3 from "../../assets/work/vs.jpg";
 // cv
 import jovidcv from "../../assets/cv/jovid.pdf";
 import navruzcv from "../../assets/cv/navruz.pdf";
+import gholibcv from "../../assets/cv/gholib.pdf";
 
 const initialState = [
   {
@@ -48,8 +63,8 @@ const initialState = [
       },
       {
         id: 3,
-        icon: <FaLinkedinIn />,
-        href: "https://www.instagram.com/jovid1242/",
+        icon: <FaWhatsapp />,
+        href: "https://wa.me/992881070990",
       },
     ],
     aboutMe:
@@ -269,12 +284,17 @@ const initialState = [
       },
       {
         id: 3,
-        icon: <FaLinkedinIn />,
-        href: "https://t.me/+992881070990",
+        icon: <FaFigma />,
+        href: "https://www.figma.com/@thenawik",
+      },
+      {
+        id: 4,
+        icon: <FaWhatsapp />,
+        href: "https://wa.me/",
       },
     ],
     aboutMe:
-      "Привет, меня зовут Наврузшох. Я Junor Веб разработчик из России. У меня есть опыт в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб-сайтов на React и хорошо разбираюсь в верстке.",
+      "Привет, меня зовут Наврузшох. Я Junior Веб разработчик из России. У меня есть опыт в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб-сайтов на React и хорошо разбираюсь в верстке.",
     cv: navruzcv,
     skills: [
       {
@@ -455,6 +475,204 @@ const initialState = [
       },
       {
         id: 6,
+        title: "Repost Space Agency",
+        href: "https://repost.ofolio.ru/",
+        image: Work2,
+      },
+    ],
+  },
+  {
+    name: "Gholib",
+    profession: "Fullstack Developer",
+    contact: "https://t.me/gholib1997",
+    userAvatar: gholibAvatar,
+    username: "gholib",
+    social: [
+      {
+        id: 1,
+        icon: <FaTelegram />,
+        href: "https://t.me/gholib1997",
+      },
+      {
+        id: 2,
+        icon: <FiGithub />,
+        href: "https://github.com/gholib",
+      },
+    ],
+    aboutMe:
+      "Любитель абстракции",
+    cv: gholibcv,
+    skills: [
+      {
+        id: 1,
+        title: "JavaScript",
+        color: "warning",
+        progress: "90",
+      },
+      {
+        id: 2,
+        title: "Hard Skills",
+        color: "danger",
+        progress: "70",
+      },
+      {
+        id: 3,
+        title: "Soft Skills",
+        color: "primary",
+        progress: "60",
+      },
+    ],
+    experience: {
+      work: [
+        {
+          id: 1,
+          icon: <MdOutlineSchool />,
+          start: "2015-01-09",
+          end: "2019-30-07",
+          title: "МГУ имени Ломоносова",
+          info: "Нанотехнология",
+        },
+        {
+          id: 2,
+          icon: <MdOutlineSchool />,
+          start: "2020-01-08",
+          end: "2022-30-08",
+          title: "Славянский Университет",
+          info: "Информационные технологии и программирования",
+        },
+      ],
+      studies: [
+        {
+          id: 1,
+          icon: <MdWorkOutline />,
+          start: "2018",
+          end: "2021",
+          title: "Скрыто",
+          info: "Fullstack Developer & Merchandiser Frontend Team",
+        },
+        {
+          id: 2,
+          icon: <MdWorkOutline />,
+          start: "2021",
+          end: "2022",
+          title: "Скрыто",
+          info: "Fullstack & JS Developer",
+        },
+      ],
+    },
+    projects: {
+      completed: "25+",
+      coffee: 2241,
+      code: 100788,
+      yearsExperience: 3,
+    },
+    skillsMe: [
+      {
+        id: 1,
+        title: "JavaScript",
+        color: "bg-yellow",
+        icon: <IoLogoJavascript />,
+      },
+      {
+        id: 2,
+        title: "React",
+        color: "bg-blue",
+        icon: <SiReact />,
+      },
+      {
+        id: 3,
+        title: "HTML",
+        color: "bg-yellow",
+        icon: <AiOutlineHtml5 />,
+      },
+      {
+        id: 4,
+        title: "CSS",
+        color: "bg-blue",
+        icon: <FaCss3 />,
+      },
+      {
+        id: 5,
+        title: "SCSS",
+        color: "bg-yellow",
+        icon: <SiSass />,
+      },
+      {
+        id: 6,
+        title: "Figma",
+        color: "bg-blue",
+        icon: <FiFigma />,
+      },
+      {
+        id: 7,
+        title: "Bootstrap",
+        color: "bg-yellow",
+        icon: <SiBootstrap />,
+      },
+      {
+        id: 8,
+        title: "Vue",
+        color: "bg-blue",
+        icon: <FaVuejs />,
+      },
+      {
+        id: 9,
+        title: "PHP",
+        color: "bg-yellow",
+        icon: <FaPhp />,
+      },
+      {
+        id: 10,
+        title: "Laravel",
+        color: "bg-blue",
+        icon: <FaLaravel />,
+      },
+      {
+        id: 11,
+        title: "MySQL",
+        color: "bg-yellow",
+        icon: <DiMysql />,
+      },
+      {
+        id: 12,
+        title: "NodeJS",
+        color: "bg-blue",
+        icon: <FaNodeJs />,
+      },
+      {
+        id: 13,
+        title: "Typescript",
+        color: "bg-yellow",
+        icon: <SiTypescript />,
+      },
+      {
+        id: 14,
+        title: "Redux",
+        color: "bg-blue",
+        icon: <SiRedux />,
+      },
+      {
+        id: 15,
+        title: "ClickHouse",
+        color: "bg-yellow",
+        icon: <DiDatabase />,
+      },
+      {
+        id: 16,
+        title: "Docker",
+        color: "bg-blue",
+        icon: <FaDocker />,
+      },
+      {
+        id: 17,
+        title: "NGINX",
+        color: "bg-yellow",
+        icon: <SiNginx />,
+      },
+    ],
+    works: [
+      {
+        id: 1,
         title: "Repost Space Agency",
         href: "https://repost.ofolio.ru/",
         image: Work2,

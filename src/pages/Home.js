@@ -11,6 +11,8 @@ import XHeader from "../components/Header/XHeader";
 import AnimatedCursor from "react-animated-cursor";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import XButton from "../core/XButton";
+import ScrollGif from "../assets/Gif/scroll.gif";
 
 export default function Home({ page }) {
   const users = useSelector((state) => state.users);
@@ -63,15 +65,22 @@ export default function Home({ page }) {
               {user.social?.map((el) => {
                 return (
                   <li className="icons" key={el.id}>
-                    <a href={el.href}>{el.icon}</a>
+                    <a target="_blank" href={el.href}>
+                      {el.icon}
+                    </a>
                   </li>
                 );
               })}
             </ul>
-            <button className="button">Контакты</button>
+            {/* <button className="button">Контакты</button> */}
+            <XButton name="Контакты" link={user.contact} />
             <div className="scroll">
               <p>Прокрутите вниз</p>
-              <CgScrollV />
+              <img
+                className="scroll-gif"
+                src={ScrollGif}
+                alt="Scroll Down Gif"
+              />
             </div>
           </div>
         </div>

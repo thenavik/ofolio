@@ -25,9 +25,9 @@ export default function XWork(props) {
               );
             })}
           </div>
-          <div className="load-more">
+          {/* <div className="load-more">
             <XButton name={"Load More"} />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

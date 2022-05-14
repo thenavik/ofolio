@@ -87,10 +87,12 @@
   flex-direction: column;
   align-items: center;
   margin-top: 140px;
-
-  svg {
-    font-size: 30px;
-    color: #353353;
+  p {
+    color: black;
+  }
+  .scroll-gif {
+    width: 30px;
+    height: 30px;
   }
 }
 

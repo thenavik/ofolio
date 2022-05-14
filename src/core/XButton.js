@@ -11,7 +11,11 @@ export default function XButton(props) {
           </a>
         </button>
       ) : (
-        <button className="btn-primary">{props.name}</button>
+        <button className="btn-primary">
+          <a target="_blank" href={props.link}>
+            {props.name}
+          </a>
+        </button>
       )}
     </>
   );
