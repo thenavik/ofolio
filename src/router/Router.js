@@ -9,6 +9,7 @@ export default function Router() {
       <Routes>
         <Route path="/jovid" element={<Home page="0" />} />
         <Route path="/navruz" element={<Home page="1" />} />
+        <Route path="/gholib" element={<Home page="2" />} />
       </Routes>
     </>
   );
