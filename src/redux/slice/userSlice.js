@@ -267,7 +267,7 @@ const initialState = [
   },
   {
     name: "Navruzshoh Daleri",
-    profession: "Джуниор фронтенд разработчик",
+    profession: "Frontend Developer",
     contact: "https://t.me/iamdigitalist",
     userAvatar: navruzAva,
     username: "navruz",
@@ -294,7 +294,7 @@ const initialState = [
       },
     ],
     aboutMe:
-      "Привет, меня зовут Наврузшох. Я Junior Веб разработчик из России. У меня есть опыт в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб-сайтов на React и хорошо разбираюсь в верстке.",
+      "Привет, меня зовут Наврузшох. Я Frontend разработчик из России. У меня есть опыт в UI/UX дизайн и разработки веб-приложений. Также, я разработал несколько учебных веб-сайтов на React и хорошо разбираюсь в верстке.",
     cv: navruzcv,
     skills: [
       {
@@ -499,8 +499,7 @@ const initialState = [
         href: "https://github.com/gholib",
       },
     ],
-    aboutMe:
-      "Любитель абстракции",
+    aboutMe: "Любитель абстракции",
     cv: gholibcv,
     skills: [
       {
