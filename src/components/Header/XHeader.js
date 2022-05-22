@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import "../../styles/header/xheader.scss";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import { BiMenuAltRight } from "react-icons/bi";
 import OfolioLogo from "../Header/ofolio.png";
 
 export default function XHeader() {
-  const [activeTab, setActiveTab] = useState("");
   const [menu, setMenu] = useState(false);
 
-  const handleClickMenu = (title) => {
+  const handleClickMenu = () => {
     enableScroll();
-    setActiveTab(title);
     setMenu(false);
   };
 
@@ -25,10 +23,10 @@ export default function XHeader() {
   };
 
   const menuList = [
-    { title: "Главная", href: "#home" },
-    { title: "Обо мне", href: "#about" },
-    { title: "Навыки", href: "#skills" },
-    { title: "Работы", href: "#works" },
+    { title: "Главная", href: "hero" },
+    { title: "Обо мне", href: "about" },
+    { title: "Навыки", href: "skills" },
+    { title: "Работы", href: "works" },
   ];
 
   const disableScroll = () => {
@@ -44,7 +42,15 @@ export default function XHeader() {
       <header className="header">
         <div className="container_ofolio">
           <nav className="navbar">
-            <Link to="#" className="logo">
+            <Link
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-120}
+              duration={500}
+              className="logo link"
+            >
               <img src={OfolioLogo} alt={OfolioLogo}></img>
             </Link>
             <div className={menu ? "menu-icon activeMenuIcon" : "menu-icon"}>
@@ -62,20 +68,21 @@ export default function XHeader() {
                       className="menu-item"
                       key={el.title + i}
                       onClick={() => {
-                        handleClickMenu(el.title);
-                        disableScroll();
+                        handleClickMenu();
+                        enableScroll();
                       }}
                     >
-                      <a
-                        href={el.href}
-                        className={
-                          activeTab !== el.title
-                            ? "menu-link link"
-                            : "menu-link active link"
-                        }
+                      <Link
+                        activeClass="active"
+                        to={el.href}
+                        spy={true}
+                        smooth={true}
+                        offset={-120}
+                        duration={500}
+                        className="menu-link link"
                       >
                         {el.title}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}
@@ -88,18 +95,22 @@ export default function XHeader() {
                     <li
                       className="mobile__menu-item"
                       key={el.title + i}
-                      onClick={() => handleClickMenu(el.title)}
+                      onClick={() => {
+                        handleClickMenu();
+                        enableScroll();
+                      }}
                     >
-                      <a
-                        href={el.href}
-                        className={
-                          activeTab !== el.title
-                            ? "mobile__menu-link"
-                            : "mobile__menu-link active"
-                        }
+                      <Link
+                        activeClass="active"
+                        to={el.href}
+                        spy={true}
+                        smooth={true}
+                        offset={50}
+                        duration={500}
+                        className="menu-link link"
                       >
                         {el.title}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}

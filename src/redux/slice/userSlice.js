@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
   FaTelegram,
-  FaLinkedinIn,
   FaNode,
   FaWhatsapp,
   FaFigma,
