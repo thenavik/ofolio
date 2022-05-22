@@ -3,7 +3,7 @@ import XAbout from "../components/About/XAbout";
 import XSkills from "../components/Skills/XSkills";
 import XExperience from "../components/Experience/XExperience";
 import XWork from "../components/Works/XWorks";
-import XFooter from "../components/footer/XFooter";
+import XFooter from "../components/Footer/XFooter";
 import XHeader from "../components/Header/XHeader";
 import AnimatedCursor from "react-animated-cursor";
 import AOS from "aos";
@@ -40,6 +40,7 @@ export default function Home({ page }) {
       />
       <XHeader />
       <Banner page={page} />
+      <canvas> </canvas>
       <div
         data-aos="fade-up"
         data-aos-duration="600"

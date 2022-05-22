@@ -10,7 +10,7 @@ export default function Banner({ page }) {
 
   return (
     <>
-      <div className="container_ofolio" id="hero">
+      <div className="container_ofolio over" id="hero">
         <div data-aos="fade-up">
           <div className="canvas__fon"></div>
           <div className="home">

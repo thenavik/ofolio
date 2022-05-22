@@ -3,6 +3,7 @@ import "../../styles/header/xheader.scss";
 import { Link } from "react-scroll";
 import { BiMenuAltRight } from "react-icons/bi";
 import OfolioLogo from "../Header/ofolio.png";
+import particls from "../../widgets/particls";
 
 export default function XHeader() {
   const [menu, setMenu] = useState(false);
@@ -36,6 +37,9 @@ export default function XHeader() {
   const enableScroll = () => {
     document.body.classList.remove("stop-scrolling");
   };
+  setTimeout(() => {
+    particls();
+  });
 
   return (
     <>
