@@ -1,330 +1,114 @@
-window.addEventListener("load", windowLoadHandler, false);
+(() => {
+  const cnv = document.querySelector("canvas");
+  const ctx = cnv.getContext("2d");
 
-//for debug messages
-var Debugger = function () {};
-Debugger.log = function (message) {
-  try {
-    console.log(message);
-  } catch (exception) {
-    return;
+  const cfg = {
+    orbsCount: 400,
+    minVelocity: 0.2,
+    ringsCount: 10,
+  };
+
+  let mx = 0,
+    my = 0;
+  cnv.addEventListener(`mousemove`, (e) => {
+    mx = e.clientX - cnv.getBoundingClientRect().left;
+    my = e.clientY - cnv.getBoundingClientRect().top;
+  });
+
+  let cw, ch, cx, cy, ph, pw;
+  function resize() {
+    cw = cnv.width = innerWidth;
+    ch = cnv.height = innerHeight;
+    cx = cw * 0.5;
+    cy = ch * 0.5;
+    ph = cy * 0.4;
+    pw = cx * 0.4;
   }
-};
+  resize();
+  window.addEventListener("resize", resize);
 
-function windowLoadHandler() {
-  canvasApp();
-}
-
-// function canvasSupport() {
-// 	return Modernizr.canvas;
-// }
-
-function canvasApp() {
-  // if (!canvasSupport()) {
-  // 	return;
-  // }
-
-  var theCanvas = document.getElementById("canvasOne");
-  var context = theCanvas.getContext("2d");
-
-  var displayWidth;
-  var displayHeight;
-  var timer;
-  var wait;
-  var count;
-  var numToAddEachFrame;
-  var particleList;
-  var recycleBin;
-  var particleAlpha;
-  var r, g, b;
-  var fLen;
-  var m;
-  var projCenterX;
-  var projCenterY;
-  var zMax;
-  var turnAngle;
-  var turnSpeed;
-  var sphereRad, sphereCenterX, sphereCenterY, sphereCenterZ;
-  var particleRad;
-  var zeroAlphaDepth;
-  var randAccelX, randAccelY, randAccelZ;
-  var gravity;
-  var rgbString;
-  //we are defining a lot of variables used in the screen update functions globally so that they don't have to be redefined every frame.
-  var p;
-  var outsideTest;
-  var nextParticle;
-  var sinAngle;
-  var cosAngle;
-  var rotX, rotZ;
-  var depthAlphaFactor;
-  var i;
-  var theta, phi;
-  var x0, y0, z0;
-
-  init();
-
-  function init() {
-    wait = 1;
-    count = wait - 1;
-    numToAddEachFrame = 8;
-
-    //particle color
-    r = 255;
-    g = 76;
-    b = 96;
-
-    rgbString = "rgba(" + r + "," + g + "," + b + ","; //partial string for color which will be completed by appending alpha value.
-    particleAlpha = 1; //maximum alpha
-
-    displayWidth = theCanvas.width;
-    displayHeight = theCanvas.height;
-
-    fLen = 320; //represents the distance from the viewer to z=0 depth.
-
-    //projection center coordinates sets location of origin
-    projCenterX = displayWidth / 2;
-    projCenterY = displayHeight / 2;
-
-    //we will not draw coordinates if they have too large of a z-coordinate (which means they are very close to the observer).
-    zMax = fLen - 2;
-
-    particleList = {};
-    recycleBin = {};
-
-    //random acceleration factors - causes some random motion
-    randAccelX = 0.1;
-    randAccelY = 0.1;
-    randAccelZ = 0.1;
-
-    gravity = 0; //try changing to a positive number (not too large, for example 0.3), or negative for floating upwards.
-
-    particleRad = 2.5;
-    sphereRad = 280;
-    sphereCenterX = 0;
-    sphereCenterY = 0;
-    sphereCenterZ = -3 - sphereRad;
-
-    //alpha values will lessen as particles move further back, causing depth-based darkening:
-    zeroAlphaDepth = -750;
-
-    turnSpeed = (2 * Math.PI) / 1600; //the sphere will rotate at this speed (one complete rotation every 1600 frames).
-    turnAngle = 0; //initial angle
-
-    timer = setInterval(onTimer, 1000 / 24);
-  }
-
-  function onTimer() {
-    //if enough time has elapsed, we will add new particles.
-    count++;
-    if (count >= wait) {
-      count = 0;
-      for (i = 0; i < numToAddEachFrame; i++) {
-        theta = Math.random() * 2 * Math.PI;
-        phi = Math.acos(Math.random() * 2 - 1);
-        x0 = sphereRad * Math.sin(phi) * Math.cos(theta);
-        y0 = sphereRad * Math.sin(phi) * Math.sin(theta);
-        z0 = sphereRad * Math.cos(phi);
-
-        //We use the addParticle function to add a new particle. The parameters set the position and velocity components.
-        //Note that the velocity parameters will cause the particle to initially fly outwards away from the sphere center (after
-        //it becomes unstuck).
-        var p = addParticle(
-          x0,
-          sphereCenterY + y0,
-          sphereCenterZ + z0,
-          0.002 * x0,
-          0.002 * y0,
-          0.002 * z0
-        );
-
-        //we set some "envelope" parameters which will control the evolving alpha of the particles.
-        p.attack = 50;
-        p.hold = 50;
-        p.decay = 160;
-        p.initValue = 0;
-        p.holdValue = particleAlpha;
-        p.lastValue = 0;
-
-        //the particle will be stuck in one place until this time has elapsed:
-        p.stuckTime = 80 + Math.random() * 20;
-
-        p.accelX = 0;
-        p.accelY = gravity;
-        p.accelZ = 0;
-      }
+  class Orb {
+    constructor() {
+      this.size = Math.random() * 5 + 2;
+      this.angle = Math.random() * 360;
+      this.radius =
+        (((Math.random() * cfg.ringsCount) | 0) * ph) / cfg.ringsCount;
+      this.impact = this.radius / ph;
+      this.velocity =
+        cfg.minVelocity + Math.random() * cfg.minVelocity - this.impact;
     }
 
-    //update viewing angle
-    turnAngle = (turnAngle + turnSpeed) % (2 * Math.PI);
-    sinAngle = Math.sin(turnAngle);
-    cosAngle = Math.cos(turnAngle);
+    refresh() {
+      let radian = (this.angle * Math.PI) / 180;
 
-    //background fill
-    context.fillStyle = "#f9f9ff";
-    context.fillRect(0, 0, displayWidth, displayHeight);
+      let cos = Math.cos(radian);
+      let sin = Math.sin(radian);
 
-    //update and draw particles
-    p = particleList.first;
-    while (p != null) {
-      //before list is altered record next particle
-      nextParticle = p.next;
+      let offsetX = cos * pw * this.impact;
+      let offsetY = sin * pw * this.impact;
 
-      //update age
-      p.age++;
+      let paralaxX = (mx / cw) * 2 - 1;
+      let paralaxY = my / ch;
 
-      //if the particle is past its "stuck" time, it will begin to move.
-      if (p.age > p.stuckTime) {
-        p.velX += p.accelX + randAccelX * (Math.random() * 2 - 1);
-        p.velY += p.accelY + randAccelY * (Math.random() * 2 - 1);
-        p.velZ += p.accelZ + randAccelZ * (Math.random() * 2 - 1);
+      let x = cx + cos * (ph + this.radius) + offsetX;
+      let y =
+        cy + sin * (ph + this.radius) - offsetY * paralaxY - paralaxX * offsetX;
 
-        p.x += p.velX;
-        p.y += p.velY;
-        p.z += p.velZ;
+      let distanceToC = Math.hypot(x - cx, y - cy);
+      let distanceToM = Math.hypot(x - mx, y - my);
+
+      let optic = sin * this.size * this.impact * 0.7;
+      let mouseEffect = distanceToM <= 50 ? (1 - distanceToM / 50) * 25 : 0;
+      let size = this.size + optic + mouseEffect;
+
+      // Color Palette
+      let shade = this.angle;
+      let saturation = 100;
+      let brightness = (1 - Math.sin(this.impact * Math.PI)) * 90 + 10;
+      let color = `hsl(${shade}, ${saturation}%, ${brightness}%)`;
+
+      if (distanceToC > ph - 1 || sin > 0) {
+        ctx.strokeStyle = ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.arc(x, y, size, 0, 2 * Math.PI);
+        distanceToM <= 50 ? ctx.stroke() : ctx.fill();
       }
 
-      /*
-					We are doing two things here to calculate display coordinates.
-					The whole display is being rotated around a vertical axis, so we first calculate rotated coordinates for
-					x and z (but the y coordinate will not change).
-					Then, we take the new coordinates (rotX, y, rotZ), and project these onto the 2D view plane.
-					*/
-      rotX = cosAngle * p.x + sinAngle * (p.z - sphereCenterZ);
-      rotZ = -sinAngle * p.x + cosAngle * (p.z - sphereCenterZ) + sphereCenterZ;
-      m = fLen / (fLen - rotZ);
-      p.projX = rotX * m + projCenterX;
-      p.projY = p.y * m + projCenterY;
-
-      //update alpha according to envelope parameters.
-      if (p.age < p.attack + p.hold + p.decay) {
-        if (p.age < p.attack) {
-          p.alpha =
-            ((p.holdValue - p.initValue) / p.attack) * p.age + p.initValue;
-        } else if (p.age < p.attack + p.hold) {
-          p.alpha = p.holdValue;
-        } else if (p.age < p.attack + p.hold + p.decay) {
-          p.alpha =
-            ((p.lastValue - p.holdValue) / p.decay) *
-              (p.age - p.attack - p.hold) +
-            p.holdValue;
-        }
-      } else {
-        p.dead = true;
-      }
-
-      //see if the particle is still within the viewable range.
-      if (
-        p.projX > displayWidth ||
-        p.projX < 0 ||
-        p.projY < 0 ||
-        p.projY > displayHeight ||
-        rotZ > zMax
-      ) {
-        outsideTest = true;
-      } else {
-        outsideTest = false;
-      }
-
-      if (outsideTest || p.dead) {
-        recycle(p);
-      } else {
-        //depth-dependent darkening
-        depthAlphaFactor = 1 - rotZ / zeroAlphaDepth;
-        depthAlphaFactor =
-          depthAlphaFactor > 1
-            ? 1
-            : depthAlphaFactor < 0
-            ? 0
-            : depthAlphaFactor;
-        context.fillStyle = rgbString + depthAlphaFactor * p.alpha + ")";
-
-        //draw
-        context.beginPath();
-        context.arc(p.projX, p.projY, m * particleRad, 0, 2 * Math.PI, false);
-        context.closePath();
-        context.fill();
-      }
-
-      p = nextParticle;
+      this.angle = (this.angle - this.velocity) % 360;
     }
   }
 
-  function addParticle(x0, y0, z0, vx0, vy0, vz0) {
-    var newParticle;
-    var color;
-
-    //check recycle bin for available drop:
-    if (recycleBin.first != null) {
-      newParticle = recycleBin.first;
-      //remove from bin
-      if (newParticle.next != null) {
-        recycleBin.first = newParticle.next;
-        newParticle.next.prev = null;
-      } else {
-        recycleBin.first = null;
-      }
-    }
-    //if the recycle bin is empty, create a new particle (a new ampty object):
-    else {
-      newParticle = {};
-    }
-
-    //add to beginning of particle list
-    if (particleList.first == null) {
-      particleList.first = newParticle;
-      newParticle.prev = null;
-      newParticle.next = null;
-    } else {
-      newParticle.next = particleList.first;
-      particleList.first.prev = newParticle;
-      particleList.first = newParticle;
-      newParticle.prev = null;
-    }
-
-    //initialize
-    newParticle.x = x0;
-    newParticle.y = y0;
-    newParticle.z = z0;
-    newParticle.velX = vx0;
-    newParticle.velY = vy0;
-    newParticle.velZ = vz0;
-    newParticle.age = 0;
-    newParticle.dead = false;
-    if (Math.random() < 0.5) {
-      newParticle.right = true;
-    } else {
-      newParticle.right = false;
-    }
-    return newParticle;
-  }
-
-  function recycle(p) {
-    //remove from particleList
-    if (particleList.first == p) {
-      if (p.next != null) {
-        p.next.prev = null;
-        particleList.first = p.next;
-      } else {
-        particleList.first = null;
-      }
-    } else {
-      if (p.next == null) {
-        p.prev.next = null;
-      } else {
-        p.prev.next = p.next;
-        p.next.prev = p.prev;
-      }
-    }
-    //add to recycle bin
-    if (recycleBin.first == null) {
-      recycleBin.first = p;
-      p.prev = null;
-      p.next = null;
-    } else {
-      p.next = recycleBin.first;
-      recycleBin.first.prev = p;
-      recycleBin.first = p;
-      p.prev = null;
+  let orbsList = [];
+  function createStardust() {
+    for (let i = 0; i < cfg.orbsCount; i++) {
+      orbsList.push(new Orb());
     }
   }
-}
+  createStardust();
+
+  //Backgrounds
+  let bg1 = ctx.createRadialGradient(cx, cy, 0, cx, cy, cx);
+  bg1.addColorStop(0, `rgb(10, 10, 10)`);
+  bg1.addColorStop(0.5, `rgb(10, 10, 20)`);
+  bg1.addColorStop(1, `rgb(30, 10, 40)`);
+
+  // Optional
+  //   let bg2 = ctx.createRadialGradient(cx, cy, 0, cx, cy, cx);
+  //   bg2.addColorStop(0, `rgb(255, 255, 255)`);
+  //   bg2.addColorStop(0.15, `rgb(255, 255, 255)`);
+  //   bg2.addColorStop(0.16, `rgb(255, 200, 0)`);
+  //   bg2.addColorStop(0.23, `rgb(255, 0, 0)`);
+  //   bg2.addColorStop(0.45, `rgb(255, 00, 25)`);
+  //   bg2.addColorStop(0.85, `rgb(9, 9, 25)`);
+  //   bg2.addColorStop(1, `rgb(0, 0, 20)`);
+
+  function loop() {
+    requestAnimationFrame(loop);
+    ctx.globalCompositeOperation = `normal`;
+    ctx.fillStyle = bg1;
+    ctx.fillRect(0, 0, cw, ch);
+    ctx.globalCompositeOperation = ` lighter`;
+    orbsList.map((e) => e.refresh());
+  }
+  loop();
+})();
