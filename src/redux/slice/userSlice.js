@@ -40,9 +40,8 @@ import Work8 from "../../img/work-8.png";
 import Work9 from "../../img/work-9.png";
 
 import workj1 from "../../assets/work/payment.jpg";
-import workj2 from "../../assets/work/todo.png";
 import workj3 from "../../assets/work/vs.jpg";
-import workj4 from "../../assets/work/smart.jpg";
+import workl2 from "../../assets/work/pablo.png";
 // cv
 import jovidcv from "../../assets/cv/jovid.pdf";
 import navruzcv from "../../assets/cv/navruz.pdf";
@@ -236,13 +235,13 @@ const initialState = [
         id: 12,
         title: "Smart Watch Landing Page",
         href: "https://smart-landing.ofolio.site/",
-        image: workj4,
+        image: Work7,
       },
       {
         id: 1,
         title: "Много функциональный строительный сайт",
         href: "https://tojmemor.tj/",
-        image: Work3,
+        image: workl2,
       },
       {
         id: 2,
@@ -254,7 +253,7 @@ const initialState = [
         id: 3,
         title: "Много функциональный строительный сайт",
         href: "https://armon.tj/",
-        image: Work4,
+        image: workl2,
       },
       {
         id: 4,
@@ -266,14 +265,14 @@ const initialState = [
         id: 5,
         title: "Repost Space Agency",
         href: "https://repost.ofolio.ru/",
-        image: Work2,
+        image: Work9,
       },
-      {
-        id: 6,
-        title: "React Todo List",
-        href: "https://react-todo.ofolio.ru/",
-        image: workj2,
-      },
+      // {
+      //   id: 6,
+      //   title: "React Todo List",
+      //   href: "https://react-todo.ofolio.ru/",
+      //   image: workj2,
+      // },
     ],
   },
   {
@@ -697,7 +696,7 @@ const initialState = [
         id: 1,
         title: "Repost Space Agency",
         href: "https://repost.ofolio.ru/",
-        image: Work2,
+        image: workl2,
       },
     ],
   },

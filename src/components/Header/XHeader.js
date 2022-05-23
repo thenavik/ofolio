@@ -8,11 +8,6 @@ import particls from "../../widgets/particls";
 export default function XHeader() {
   const [menu, setMenu] = useState(false);
 
-  const handleClickMenu = () => {
-    enableScroll();
-    setMenu(false);
-  };
-
   const toggleMenu = () => {
     if (menu) {
       setMenu(false);
@@ -37,6 +32,7 @@ export default function XHeader() {
   const enableScroll = () => {
     document.body.classList.remove("stop-scrolling");
   };
+
   setTimeout(() => {
     particls();
   });
@@ -68,14 +64,7 @@ export default function XHeader() {
               <ul className="menu-list">
                 {menuList?.map((el, i) => {
                   return (
-                    <li
-                      className="menu-item"
-                      key={el.title + i}
-                      onClick={() => {
-                        handleClickMenu();
-                        enableScroll();
-                      }}
-                    >
+                    <li className="menu-item" key={el.title + i}>
                       <Link
                         activeClass="active"
                         to={el.href}
@@ -96,14 +85,7 @@ export default function XHeader() {
               <ul className="mobile__menu-list">
                 {menuList?.map((el, i) => {
                   return (
-                    <li
-                      className="mobile__menu-item"
-                      key={el.title + i}
-                      onClick={() => {
-                        handleClickMenu();
-                        enableScroll();
-                      }}
-                    >
+                    <li className="mobile__menu-item" key={el.title + i}>
                       <Link
                         activeClass="active"
                         to={el.href}
@@ -111,7 +93,8 @@ export default function XHeader() {
                         smooth={true}
                         offset={50}
                         duration={500}
-                        className="menu-link link"
+                        className="mobile-menu-link link"
+                        onClick={() => toggleMenu()}
                       >
                         {el.title}
                       </Link>

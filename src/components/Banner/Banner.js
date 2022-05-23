@@ -12,7 +12,6 @@ export default function Banner({ page }) {
     <>
       <div className="container_ofolio over" id="hero">
         <div data-aos="fade-up">
-          <div className="canvas__fon"></div>
           <div className="home">
             <img
               src={user.userAvatar}
@@ -32,7 +31,6 @@ export default function Banner({ page }) {
                 );
               })}
             </ul>
-            {/* <button className="button">Контакты</button> */}
             <XButton name="Контакты" link={user.contact} />
             <div className="scroll">
               <p>Прокрутите вниз</p>

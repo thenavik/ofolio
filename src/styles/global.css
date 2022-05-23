@@ -25,7 +25,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: #5e5c7f;
+  /* color: #5e5c7f; */
 }
 
 ul {
@@ -105,6 +105,15 @@ canvas {
   }
   canvas {
     display: none;
+  }
+
+  .over {
+    position: relative !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, 0) !important;
+    height: 100vh !important;
+    width: 100% !important;
   }
 }
 
