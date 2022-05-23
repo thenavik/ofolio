@@ -42,6 +42,7 @@ import Work9 from "../../img/work-9.png";
 import workj1 from "../../assets/work/payment.jpg";
 import workj2 from "../../assets/work/todo.png";
 import workj3 from "../../assets/work/vs.jpg";
+import workj4 from "../../assets/work/smart.jpg";
 // cv
 import jovidcv from "../../assets/cv/jovid.pdf";
 import navruzcv from "../../assets/cv/navruz.pdf";
@@ -231,6 +232,12 @@ const initialState = [
       },
     ],
     works: [
+      {
+        id: 12,
+        title: "Smart Watch Landing Page",
+        href: "https://smart-landing.ofolio.site/",
+        image: workj4,
+      },
       {
         id: 1,
         title: "Много функциональный строительный сайт",
