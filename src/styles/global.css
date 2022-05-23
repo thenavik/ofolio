@@ -103,12 +103,18 @@ canvas {
     width: 720px;
     margin: 0 auto;
   }
+  canvas {
+    display: none;
+  }
 }
 
 @media (max-width: 576px) {
   .container_ofolio {
     width: 540px;
     margin: 0 auto;
+  }
+  canvas {
+    display: none;
   }
 }
 
@@ -121,5 +127,8 @@ canvas {
   .col_4 .col_3 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
+  }
+  canvas {
+    display: none;
   }
 }

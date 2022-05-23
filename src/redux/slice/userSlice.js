@@ -29,10 +29,15 @@ import {
   SiTypescript,
   SiNginx,
 } from "react-icons/si";
-import Work5 from "../../img/work-5.webp";
-import Work2 from "../../img/work-2.webp";
+//Navruz Works
+import Work5 from "../../img/work-5.png";
+import Work2 from "../../img/work-2.png";
 import Work3 from "../../img/work-3.png";
-import Work4 from "../../img/work-4.jpg";
+import Work4 from "../../img/work-4.png";
+import Work6 from "../../img/work-6.png";
+import Work7 from "../../img/work-7.png";
+import Work8 from "../../img/work-8.png";
+import Work9 from "../../img/work-9.png";
 
 import workj1 from "../../assets/work/payment.jpg";
 import workj2 from "../../assets/work/todo.png";
@@ -470,13 +475,25 @@ const initialState = [
         id: 5,
         title: "Repost Minimalist HTML5 Template",
         href: "https://repost-mini.ofolio.ru/",
-        image: Work3,
+        image: Work6,
       },
       {
         id: 6,
         title: "Repost Space Agency",
         href: "https://repost.ofolio.ru/",
-        image: Work2,
+        image: Work9,
+      },
+      {
+        id: 7,
+        title: "Watch - React Landing Pahe",
+        href: "https://smart-landing.ofolio.site/",
+        image: Work7,
+      },
+      {
+        id: 8,
+        title: "Design One Page",
+        href: "https://www.figma.com/community/file/1108129832394554743",
+        image: Work8,
       },
     ],
   },
