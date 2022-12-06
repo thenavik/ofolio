@@ -128,7 +128,7 @@ const initialState = [
           start: "2021-04-01",
           end: "2021-09-04",
           title: "Web Studio BO/BO",
-          info: "Джуниор фронтенд разработчик",
+          info: "Фронтенд разработчик",
         },
         {
           id: 2,
@@ -136,7 +136,7 @@ const initialState = [
           start: "2021-04-01",
           end: "2021-12-04",
           title: "Web Studio BO/BO",
-          info: "Джуниор фуллстак разработчик",
+          info: "Фуллстак разработчик",
         },
         {
           id: 3,
