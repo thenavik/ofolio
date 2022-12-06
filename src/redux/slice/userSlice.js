@@ -259,7 +259,12 @@ const initialState = [
         title: "Repost Space Agency",
         href: "http://repost.ofolio.ru/",
         image: Work9,
-      }, 
+      }, {
+        id: 515,
+        title: "Repost Space Agency",
+        href: "http://t.me/irina_soundbot",
+        image: "https://adminvps.ru/blog/wp-content/uploads/2020/07/pvylr1rn9ri2-3.jpeg",
+      },
     ],
   },
   {
