@@ -15,7 +15,7 @@ import gholibAvatar from "../../assets/avatar/gholib.jpg";
 import { MdOutlineSchool, MdWorkOutline } from "react-icons/md";
 import { FiGithub, FiFigma } from "react-icons/fi";
 import navruzAva from "../../img/avatar-navruz.png";
-import { IoLogoJavascript } from "react-icons/io";
+import { IoLogoJavascript } from "react-icons/io"; 
 import { FaCss3 } from "react-icons/fa";
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { DiPhotoshop, DiMysql, DiDatabase } from "react-icons/di";
@@ -40,7 +40,7 @@ import Work8 from "../../img/work-8.png";
 import Work9 from "../../img/work-9.png";
 
 import workj1 from "../../assets/work/payment.jpg";
-import workj3 from "../../assets/work/vs.jpg";
+import workj3 from "../../assets/work/cripto.png";
 import workl2 from "../../assets/work/pablo.png";
 // cv
 import jovidcv from "../../assets/cv/jovid.pdf";
@@ -51,14 +51,14 @@ const initialState = [
   {
     name: "Jovid Masharipov",
     profession: "Front-End разработчик",
-    contact: "https://t.me/+992881070990",
+    contact: "https://t.me/+79124544922",
     userAvatar: jovidAvatar,
     username: "jovid",
     social: [
       {
         id: 1,
         icon: <FaTelegram />,
-        href: "https://t.me/+992881070990",
+        href: "https://t.me/+79124544922",
       },
       {
         id: 2,
@@ -95,15 +95,7 @@ const initialState = [
       },
     ],
     experience: {
-      work: [
-        {
-          id: 1,
-          icon: <MdOutlineSchool />,
-          start: "2020",
-          end: "2025",
-          title: "ТПГУ - Таджикский государственный педагогический университет",
-          info: "Информатика и английский язык",
-        },
+      work: [ 
         {
           id: 2,
           icon: <MdOutlineSchool />,
@@ -149,11 +141,12 @@ const initialState = [
         {
           id: 3,
           icon: <MdWorkOutline />,
-          start: "2022-01-06",
-          end: " 2022-03-27",
-          title: "Repost Space",
-          info: "Фронтенд React - Next разработчик",
+          start: "2020-02-06",
+          end: "2020-11-27",
+          title: "Dushanbe soft",
+          info: "Frontend разработчик",
         },
+
       ],
     },
     projects: {
@@ -168,6 +161,12 @@ const initialState = [
         title: "JavaScript",
         color: "bg-yellow",
         icon: <IoLogoJavascript />,
+      },
+      {
+        id: 1188,
+        title: "TypeScript",
+        color: "bg-blue",
+        icon: <SiTypescript />,
       },
       {
         id: 2,
@@ -234,45 +233,33 @@ const initialState = [
       {
         id: 12,
         title: "Smart Watch Landing Page",
-        href: "https://smart-landing.ofolio.site/",
+        href: "http://smart.ofolio.ru/",
         image: Work7,
       },
       {
-        id: 1,
-        title: "Много функциональный строительный сайт",
-        href: "https://tojmemor.tj/",
+        id: 1334,
+        title: "Blog SSR MERN",
+        href: "http://ofolio.ru/",
         image: workl2,
       },
       {
-        id: 2,
-        title: "Cтроительный сайт",
-        href: "https://vose-construction.tj/",
+        id: 235,
+        title: "Cайт КРИПТО",
+        href: "https://investcoin2020.com/",
         image: workj3,
-      },
+      }, 
       {
-        id: 3,
-        title: "Много функциональный строительный сайт",
-        href: "https://armon.tj/",
-        image: workl2,
-      },
-      {
-        id: 4,
+        id: 455,
         title: "React payment system (UI-UX)",
         href: "https://payment.ofolio.ru/",
         image: workj1,
       },
       {
-        id: 5,
+        id: 5333,
         title: "Repost Space Agency",
-        href: "https://repost.ofolio.ru/",
+        href: "http://repost.ofolio.ru/",
         image: Work9,
-      },
-      // {
-      //   id: 6,
-      //   title: "React Todo List",
-      //   href: "https://react-todo.ofolio.ru/",
-      //   image: workj2,
-      // },
+      }, 
     ],
   },
   {
