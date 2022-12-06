@@ -8,8 +8,8 @@ export default function XFooter() {
       <footer>
         <span>
           Made with ♥ by{" "}
-          <a href="https://repost.ofolio.ru/" target={"blank"}>
-            Repost Space
+          <a href="http://repost.ofolio.ru/" target="_blank">
+            Repost Space 
           </a>
         </span>
       </footer>
